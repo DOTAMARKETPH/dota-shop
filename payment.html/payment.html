@@ -270,6 +270,40 @@
   image-rendering: auto;
 }
 
+  
+
+    .order-summary {
+      margin: 22px 0 16px;
+      padding: 16px;
+      background: #17131f;
+      border: 1px solid #373041;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .order-summary h2 {
+      margin: 0 0 12px;
+      color: #f4efff;
+      font-size: 16px;
+    }
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid #30283a;
+      color: #e9e2f2;
+      font-size: 13px;
+    }
+
+    .order-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .order-item-name { font-weight: 600; line-height: 1.45; }
+    .order-item-meta { display: block; margin-top: 4px; color: #aaa0b9; font-size: 12px; }
+    .order-item-price { white-space: nowrap; font-weight: 700; }
+    .order-empty { margin: 0; color: #c4b8d2; font-size: 13px; line-height: 1.6; }
+
   </style>
 </head>
 
@@ -289,6 +323,13 @@
       Select your preferred payment method and scan the QR code
       to pay the exact amount shown below.
     </p>
+
+    <section class="order-summary" aria-labelledby="orderSummaryTitle">
+      <h2 id="orderSummaryTitle">Items in Your Order</h2>
+      <div id="orderItemsList">
+        <p class="order-empty">Order details were not provided. Please return to the shop and check out again.</p>
+      </div>
+    </section>
 
     <div class="total-box">
       <span class="total-label">TOTAL TO PAY</span>
@@ -365,6 +406,46 @@ if (total !== null && total.trim() !== "" &&
   paymentTotal.textContent = "Cart total unavailable";
 }
 
+
+    // Render the purchased products above the total.
+    const orderItemsList = document.getElementById("orderItemsList");
+    const rawItems = params.get("items");
+    const money = (amount) => "₱" + Number(amount).toLocaleString("en-PH", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    if (rawItems) {
+      try {
+        const orderItems = JSON.parse(rawItems);
+        if (Array.isArray(orderItems) && orderItems.length > 0) {
+          orderItemsList.replaceChildren();
+          orderItems.forEach((item) => {
+            const row = document.createElement("div");
+            row.className = "order-item";
+
+            const details = document.createElement("div");
+            const name = document.createElement("span");
+            name.className = "order-item-name";
+            name.textContent = String(item.name || "Dota item");
+
+            const meta = document.createElement("span");
+            meta.className = "order-item-meta";
+            meta.textContent = `${money(item.price)} × ${Number(item.qty) || 1}`;
+            details.append(name, meta);
+
+            const subtotal = document.createElement("span");
+            subtotal.className = "order-item-price";
+            subtotal.textContent = money(item.subtotal);
+
+            row.append(details, subtotal);
+            orderItemsList.append(row);
+          });
+        }
+      } catch (error) {
+        orderItemsList.textContent = "Order details could not be read. Please return to the shop and check out again.";
+      }
+    }
 
     const paymentDetails = document.getElementById("paymentDetails");
     const paymentName = document.getElementById("paymentName");
