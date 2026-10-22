@@ -467,6 +467,19 @@ document.getElementById("checkoutButton").addEventListener("click", () => {
 
   paymentUrl.searchParams.set("total", String(total));
 
+  // Pass a safe snapshot of the purchased items to the payment page.
+  // Include only the fields needed for the order summary.
+  const orderItems = cart.map((item) => {
+    const product = products.find((entry) => entry.id === item.id);
+    return {
+      name: product.name,
+      price: product.price,
+      qty: item.qty,
+      subtotal: product.price * item.qty
+    };
+  });
+  paymentUrl.searchParams.set("items", JSON.stringify(orderItems));
+
   const paymentTab = window.open(paymentUrl.href, "_blank");
 
   // Notify the customer if the browser blocks the new tab.
