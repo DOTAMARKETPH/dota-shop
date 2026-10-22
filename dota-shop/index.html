@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111317">
+  <title>Dota Shop — Cosmetic Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#market" aria-label="Dota Shop home"><img class="brand-logo" src="./images/dota-logo.png" alt="Dota Shop Logo"></a>
+    
+<nav class="nav-links">
+  <a class="active" href="#market" data-nav="market">Dota Market</a>
+  <a href="#cache-sets" data-nav="cache-sets">Cache Sets</a>
+  <a href="https://www.facebook.com/carl.ike.353"
+     target="_blank"
+     rel="noopener noreferrer">Facebook ↗</a>
+</nav>
+
+    <div class="header-actions">
+      <label class="search-wrap" aria-label="Search items"><span>⌕</span><input id="searchInput" type="search" placeholder="Search items..."></label>
+      <button class="cart-button" id="cartButton">Cart <span id="cartCount">0</span></button>
+    </div>
+    </header>
+  
+  <main>
+    <section class="market-section" id="market">
+      <div class="section-heading">
+        <div><p class="eyebrow">DOTA 2 COSMETICS</p><h2>Dota Market</h2></div>
+        <label class="sort-label">Sort by
+          <select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name: A–Z</option></select>
+        </label>
+      </div>
+      <div class="market-layout">
+        <aside class="sidebar">
+          <h3>Categories</h3>
+          <button class="category active" data-category="All">◈ <span>All items</span><small id="countAll"></small></button>
+          <button class="category" data-category="Arcana">⬡ <span>Arcana</span></button>
+          <button class="category" data-category="Immortals">✦ <span>Immortals</span></button>
+          <button class="category" data-category="Mix Sets">◌ <span>Mix Sets</span></button>
+          <div class="sidebar-note"><span>◆</span><b>Collector's corner</b><p>Find a new look for your favorite hero.</p></div>
+        </aside>
+        <div class="products-area">
+          
+<div class="results-line">
+  <span id="resultsText">items</span>
+</div>
+
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>No items found. Try another search or category.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="market-section cache-section" id="cache-sets">
+      <div class="section-heading">
+        <div class="cache-notice">
+  <strong>Important Notice</strong>
+  <p>
+    Cache sets are giftable only, 30days friend waiting time. If you want to avail the sets,
+    just message me on my Facebook account in the Facebook tab.
+  </p>
+</div>
+        <div>
+          <p class="eyebrow">COLLECTOR'S COLLECTION</p>
+          <h2>Cache Sets</h2>
+          <p class="cache-description">Browse your listed Dota 2 Cache sets.</p>
+        </div>
+      </div>
+      <div class="product-grid" id="cacheSetGrid"></div>
+      <div class="empty-state" id="cacheEmptyState" hidden>
+        No Cache Sets listed yet. Add items in script.js and set their category to "Cache sets".
+      </div>
+    </section>
+
+  </main>
+
+  <footer><span>Made for the battlefield. Built for collectors.</span><span>© 2026 Dota Shop</span></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cart-overlay" id="cartOverlay" hidden>
+    <button class="overlay-backdrop" id="closeCartBackdrop" aria-label="Close cart"></button>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Shopping cart</h2></div><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer"><div class="total-row"><span>Estimated total</span><strong id="cartTotal">₱0</strong></div>
+      <button class="primary-button checkout-button" id="checkoutButton">
+  Proceed to Payment <span>↗</span>
+</button>
+<p>Choose GCash or MariBank to continue with payment.</p></div>
+    </aside>
+  </div>
+  <!-- PAYMENT POPUP -->
+<div class="payment-overlay" id="paymentOverlay" hidden>
+  <div class="payment-modal">
+    <button class="payment-close" id="closePayment">×</button>
+
+    <h2>Choose Your Payment Method</h2>
+    <p class="payment-total">
+      Total to Pay: <strong id="paymentTotal">₱0.00</strong>
+    </p>
+
+    <div class="payment-options">
+      <button class="payment-option" data-payment="gcash">
+        GCash
+      </button>
+
+      <button class="payment-option" data-payment="maribank">
+        MariBank
+      </button>
+    </div>
+
+    <div id="paymentDetails" hidden>
+      <h3 id="paymentName"></h3>
+      <img id="paymentQR" src="" alt="Payment QR code">
+
+      <p>
+        Scan the QR code using your selected payment app and pay
+        the exact amount shown above.
+      </p>
+
+      <label for="receiptUpload">Upload your payment receipt</label>
+      <input
+        type="file"
+        id="receiptUpload"
+        accept="image/*"
+      >
+
+      <p class="payment-notice">
+        After completing your payment, please message me through
+        my Facebook account in the Facebook tab. Send a screenshot
+        of your payment receipt so I can verify your transaction
+        and process your order.
+      </p>
+
+      <a
+        href="https://www.facebook.com/carl.ike.353"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="facebook-payment-link"
+      >
+        Message me on Facebook
+      </a>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

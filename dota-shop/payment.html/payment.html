@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080b">
+  <title>Dota Shop — Payment</title>
+
+  <style>
+    
+    * {
+    
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #08080b;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .payment-card {
+      width: 100%;
+      max-width: 480px;
+      padding: 32px;
+      background: #17151f;
+      border: 1px solid #49365e;
+      border-radius: 18px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.65);
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #bb8bff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 27px;
+      margin: 0 0 12px;
+    }
+
+    .description {
+      color: #c5c0d0;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .total-box {
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 12px;
+      background: #0d0c12;
+      border: 1px solid #373041;
+    }
+
+    .total-label {
+      display: block;
+      color: #b8b0c6;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    #paymentTotal {
+      color: #d5aaff;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .payment-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .payment-option {
+      padding: 15px 10px;
+      background: #292333;
+      color: white;
+      border: 1px solid #5c4774;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .payment-option:hover,
+    .payment-option.active {
+      background: #7541a8;
+      border-color: #c69aff;
+    }
+
+    .payment-details {
+      padding-top: 8px;
+    }
+
+    .payment-details[hidden] {
+      display: none !important;
+    }
+
+    #paymentName {
+      font-size: 20px;
+      margin: 12px 0;
+    }
+
+    #paymentQR {
+      display: block;
+      width: 100%;
+      max-width: 270px;
+      max-height: 300px;
+      object-fit: contain;
+      padding: 12px;
+      margin: 16px auto;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .qr-error {
+      color: #ffb5b5;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .receipt-section {
+      text-align: left;
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid #393142;
+    }
+
+    .receipt-section label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      color: #ded8e8;
+      background: #0d0c12;
+      border: 1px solid #494052;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    .receipt-help {
+      color: #bdb5c9;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .facebook-button {
+      display: block;
+      width: 100%;
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 9px;
+      background: #1877f2;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .facebook-button:hover {
+      background: #0e65d8;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: #c8a5f4;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+   
+.payment-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.payment-logo img {
+  display: block;
+  width: 180px;
+  max-width: 75%;
+  height: auto;
+  object-fit: contain;
+}
+
+.payment-logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.payment-logo img:hover {
+  opacity: 1.0;
+}
+
+@media (max-width: 480px) {
+  .payment-card {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  #paymentTotal {
+    font-size: 26px;
+  }
+
+  .payment-logo img {
+    width: 150px;
+  }
+}
+
+.payment-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.payment-logo img {
+  display: block;
+  width: 180px;
+  max-width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* Bigger, clearer payment QR codes */
+#paymentQR {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  margin: 20px auto;
+  padding: 12px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  image-rendering: auto;
+}
+
+  </style>
+</head>
+
+<body>
+  <main class="payment-card">
+
+    <!-- Dota Shop Header Logo -->
+    <div class="payment-logo">
+      <a href="./index.html" aria-label="Return to Dota Shop">
+        <img src="./images/logo.png" alt="Dota Shop Logo">
+      </a>
+    </div>
+
+    <p class="eyebrow">DOTA SHOP MARKETPLACE</p>
+
+    <p class="description">
+      Select your preferred payment method and scan the QR code
+      to pay the exact amount shown below.
+    </p>
+
+    <div class="total-box">
+      <span class="total-label">TOTAL TO PAY</span>
+      <strong id="paymentTotal">₱0.00</strong>
+    </div>
+
+    <div class="payment-options">
+      <button class="payment-option" type="button"
+              data-payment="gcash">
+        GCash
+      </button>
+
+      <button class="payment-option" type="button"
+              data-payment="maribank">
+        MariBank
+      </button>
+    </div>
+
+    <section class="payment-details" id="paymentDetails" hidden>
+      <h2 id="paymentName"></h2>
+
+      <img id="paymentQR" src="" alt="Selected payment QR code" hidden>
+
+      <p id="qrError" class="qr-error" hidden>
+        The QR image could not be loaded. Check that the correct image
+        exists inside your images folder.
+      </p>
+
+      <p class="description">
+        Scan the QR code using your selected payment app. Verify the
+        recipient and amount before confirming your payment.
+      </p>
+
+      
+<div class="receipt-section">
+  <p class="receipt-help">
+    After paying, message me on Facebook and attach a screenshot
+    of your payment receipt so I can verify your transaction.
+    Selecting a file here does not send it automatically.
+  </p>
+
+  <a
+    class="facebook-button"
+    href="https://www.facebook.com/carl.ike.353"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Message Me on Facebook ↗
+  </a>
+</div>
+</section>
+  
+<a class="back-link" href="../index.html">
+  ← Return to Dota Shop
+</a>
+
+  </main>
+
+  <script>
+    // Read the cart total passed from the shop URL.
+    const params = new URLSearchParams(window.location.search);
+    const total = params.get("total");
+
+    
+const paymentTotal = document.getElementById("paymentTotal");
+
+if (total !== null && total.trim() !== "" &&
+    Number.isFinite(Number(total)) && Number(total) >= 0) {
+  paymentTotal.textContent = "₱" + Number(total).toLocaleString("en-PH", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+} else {
+  paymentTotal.textContent = "Cart total unavailable";
+}
+
+
+    const paymentDetails = document.getElementById("paymentDetails");
+    const paymentName = document.getElementById("paymentName");
+    const paymentQR = document.getElementById("paymentQR");
+    const qrError = document.getElementById("qrError");
+    const paymentButtons = document.querySelectorAll("[data-payment]");
+
+    paymentButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const method = button.dataset.payment;
+
+        paymentButtons.forEach((item) => {
+          item.classList.toggle("active", item === button);
+        });
+
+        paymentDetails.hidden = false;
+        qrError.hidden = true;
+        paymentQR.hidden = false;
+
+        if (method === "gcash") {
+          paymentName.textContent = "GCash Payment";
+          paymentQR.src = "./images/gcash.png";
+          paymentQR.alt = "GCash QR code";
+        } else {
+          paymentName.textContent = "MariBank Payment";
+          paymentQR.src = "./images/maribank.png";
+          paymentQR.alt = "MariBank QR code";
+        }
+      });
+    });
+
+    paymentQR.addEventListener("error", () => {
+      paymentQR.hidden = true;
+      qrError.hidden = false;
+    });
+
+    paymentQR.addEventListener("load", () => {
+      paymentQR.hidden = false;
+      qrError.hidden = true;
+    });
+  </script>
+</body>
+</html>
