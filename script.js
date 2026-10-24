@@ -2,9 +2,288 @@
 /* ========================================
    DOTA SHOP - COMPLETE UPDATED SCRIPT
    ======================================== */
-
 // PRODUCT LISTINGS
-const products = [{
+const products = [
+   {
+    id: 56,
+    name: "Mega-Kills: Cave Johnson",
+    category: "Random",
+    rarity: "Mythical",
+    price: 2,
+    stock: 1,
+    image: "./random/Mega-Kills Cave Johnson.png",
+    featured: 56
+  },
+  {
+    id: 55,
+    name: "Announcer: Pirate Captain",
+    category: "Random",
+    rarity: "Mythical",
+    price: 2,
+    stock: 2,
+    image: "./random/Announcer Pirate Captain.png",
+    featured: 57
+  },
+  {
+    id: 57,
+    name: "Mega-Kills: Crystal Maiden",
+    category: "Random",
+    rarity: "Mythical",
+    price: 4,
+    stock: 1,
+    image: "./random/Mega-Kills Crystal Maiden.png",
+    featured: 55
+  },
+  {
+    id: 54,
+    name: "Announcer: Crystal Maiden",
+    category: "Random",
+    rarity: "Mythical",
+    price: 5,
+    stock: 1,
+    image: "./random/Announcer Crystal Maiden.png",
+    featured: 54
+  },
+  {
+    id: 53,
+    name: "Announcer: Clockwerk",
+    category: "Random",
+    rarity: "Mythical",
+    price: 10,
+    stock: 1,
+    image: "./random/Announcer Clockwerk.png",
+    featured: 52
+  },
+  {
+    id: 52,
+    name: "Mega-Kills: Kunkka & Tidehunter",
+    category: "Random",
+    rarity: "Mythical",
+    price: 5,
+    stock: 1,
+    image: "./random/Mega-Kills Kunkka & Tidehunter.png",
+    featured: 52
+  },
+  {
+    id: 50,
+    name: "Unbroken Stallion Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 5,
+    stock: 1,
+    image: "./cursor/Unbroken Stallion Cursor Pack.png",
+    featured: 50
+  },
+  {
+    id: 49,
+    name: "The International 2019 Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 5,
+    stock: 1,
+    image: "./cursor/The International 2019 Cursor Pack.png",
+    featured: 49
+  },
+  {
+    id: 48,
+    name: "The International 2016 Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 5,
+    stock: 1,
+    image: "./cursor/The International 2016 Cursor Pack.png",
+    featured: 48
+  },
+   {
+    id: 47,
+    name: "Genuine DAC 2015 Mirana Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 25,
+    stock: 1,
+    image: "./cursor/Genuine DAC 2015 Mirana Cursor Pack.png",
+    featured: 47
+  },
+  {
+    id: 46,
+    name: "Diretide 2020 Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 5,
+    stock: 2,
+    image: "./cursor/Diretide 2020 Cursor Pack.png",
+    featured: 46
+  },
+  {
+    id: 45,
+    name: "Kinetic: Allure of the Succubus",
+    hero: "Queen of Pain",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 8,
+    originalPrice: 10,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 45
+  },
+  {
+    id: 44,
+    name: "Kinetic: Bladekeeper's Bladefury",
+    hero: "Juggernaut",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 25,
+    originalPrice: 31,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 44
+  },
+  {
+    id: 43,
+    name: "Kinetic: Bladekeeper's Blade Dance",
+    hero: "Juggernaut",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 52,
+    originalPrice: 66,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 43
+  },
+  {
+    id: 42,
+    name: "Kinetic: Bladekeeper's Omnislash",
+    hero: "Juggernaut",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 25,
+    originalPrice: 31,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 42
+  },
+  {
+    id: 41,
+    name: "Kinetic: Muh Keen Gun",
+    hero: "Sniper",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 8,
+    originalPrice: 10,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 41
+  },
+  {
+    id: 40,
+    name: "Kinetic: Booties of Travel!",
+    hero: "Tinker",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 8,
+    originalPrice: 10,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 40
+  },
+  {
+    id: 39,
+    name: "Kinetic: Crow's Feet",
+    hero: "Pudge",
+    category: "Kinetic Gem",
+    rarity: "Rare",
+    price: 115,
+    originalPrice: 141,
+    stock: 1,
+    image: "./kinetic/Kinetic.png",
+    featured: 39
+  },
+  {
+    id: 38,
+    name: "Infused Armor of the Fearful Aria",
+    hero: "Phantom Assasin",
+    category: "Infused",
+    rarity: "Mythical",
+    price: 175,
+    originalPrice: 219,
+    stock: 1,
+    image: "./infused/Infused Armor of the Fearful Aria.png",
+    featured: 38
+  },
+  {
+    id: 51,
+    name: "Taunt: Skip to the Good Stuff!",
+    hero: "Pudge",
+    category: "Taunt",
+    rarity: "Legendary",
+    price: 72,
+    originalPrice: 90,
+    stock: 1,
+    image: "./taunt/Taunt Skip to the Good Stuff!.png",
+    featured: 51
+  },
+  {
+    id: 37,
+    name: "Taunt: Step Lively",
+    hero: "Kunkka",
+    category: "Taunt",
+    rarity: "Mythical",
+    price: 22,
+    originalPrice: 28,
+    stock: 1,
+    image: "./taunt/Taunt Step Lively.png",
+    featured: 37
+  },
+  {
+    id: 36,
+    name: "Taunt: Sawed-off Watergun",
+    hero: "Morphling",
+    category: "Taunt",
+    rarity: "Mythical",
+    price: 17,
+    originalPrice: 22,
+    stock: 1,
+    image: "./taunt/Taunt Sawed-off Watergun.png",
+    featured: 36
+  },
+  {
+    id: 35,
+    name: "Taunt: Curious Movements Indeed",
+    hero: "Tinker",
+    category: "Taunt",
+    rarity: "Mythical",
+    price: 5,
+    originalPrice: 7,
+    stock: 1,
+    image: "./taunt/Taunt Curious Movements Indeed.png",
+    featured: 35
+  },
+  {
+    id: 34,
+    name: "Taunt: Advanced Bladework",
+    hero: "Tinker",
+    category: "Taunt",
+    rarity: "Mythical",
+    price: 25,
+    originalPrice: 31,
+    stock: 1,
+    image: "./taunt/Taunt Advanced Bladework.png",
+    featured: 34
+  },
+  {
+    id: 33,
+    name: "Taunt: Hot Eats",
+    hero: "Ember Spirit",
+    category: "Taunt",
+    rarity: "Mythical",
+    price: 16,
+    originalPrice: 21,
+    stock: 1,
+    image: "./taunt/Taunt Hot Eats.png",
+    featured: 33
+  },
+  
+  {
   id: 32,
   name: "Wraith of the Red Sands",
   hero: "Phantom Lancer",
@@ -401,7 +680,7 @@ originalPrice: 53,
   name: "Weather Snow",
   category: "Weather",
   rarity: "Genuine",
-  price: 200,
+  price: 250,
   stock: 1,
   image: "./images/Snow.png",
   featured: 15
@@ -523,7 +802,14 @@ function updateCategoryCounts() {
       countCategory("Immortal") + countCategory("Immortals"),
     countMixSets: countCategory("Mix/Sets"),
     countCacheSets: countCategory("Cache Sets"),
-    countWeather: countCategory("Weather")
+    countWeather: countCategory("Weather"),
+
+    // New categories
+    countTaunt: countCategory("Taunt"),
+    countInfused: countCategory("Infused"),
+    countKineticGem: countCategory("Kinetic Gem"),
+    countCursorPack: countCategory("Cursor Pack"),
+    countRandom: countCategory("Random")
   };
 
   Object.entries(counts).forEach(([id, count]) => {
