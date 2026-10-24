@@ -299,7 +299,7 @@ const products = [{
     category: "Immortal",
     rarity: "Immortal",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./images/tinker.png",
     featured: 10
   },
