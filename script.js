@@ -305,7 +305,7 @@ const products = [{
   },
   {
     id: 11,
-    name: "Arcane infestation",
+    name: "Arcane Infestation",
     hero: "Broodmother",
     category: "mix/sets",
     rarity: "rare",
@@ -313,7 +313,7 @@ const products = [{
     price: 15,
     originalPrice: 20,
     stock: 1,
-    image: "./images/Arcane infestation.png",
+    image: "./images/Arcane Infestation.png",
     featured: 11    
   },
   {
@@ -372,7 +372,7 @@ originalPrice: 53,
 },
 {
   id: 17,
-  name: "Chasm Of The Broken Code",
+  name: "Chasm of the Broken Code",
   hero: "Terrorblade",
   category: "Mix/Sets",
   rarity: "Mythical",
@@ -380,7 +380,7 @@ originalPrice: 53,
   price: 150,
   originalPrice: 188,
   stock: 1,
-  image: "./images/Chasm Of The Broken Code.png",
+  image: "./images/Chasm Of the Broken Code.png",
   featured: 17
 },
 {
