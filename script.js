@@ -13,7 +13,7 @@ const products = [{
   condition: "Bundled",
   price: 16,
   originalPrice: 21,
-  stock: 1,
+  stock: 2,
   image: "./images/Wraith of the Red Sands.png",
   featured: 32
 },
@@ -92,7 +92,7 @@ const products = [{
   condition: "Bundled",
   price: 24,
   originalPrice: 30,
-  stock: 1,
+  stock: 4,
   image: "./images/Patterns of the Pristine.png",
   featured: 21
 },
@@ -105,7 +105,7 @@ const products = [{
   condition: "Bundled",
   price: 100,
   originalPrice: 133,
-  stock: 1,
+  stock: 2,
   image: "./images/Night Terrors.png",
   featured: 25
 },
@@ -144,7 +144,7 @@ const products = [{
   condition: "Bundled",
   price: 20,
   originalPrice: 25,
-  stock: 1,
+  stock: 2,
   image: "./images/Eye of the Fateweaver.png",
   featured: 22
 },
@@ -157,7 +157,7 @@ const products = [{
   condition: "Bundled",
   price: 20,
   originalPrice: 25,
-  stock: 1,
+  stock: 5,
   image: "./images/Edge of Extinction.png",
   featured: 21
 },
@@ -352,7 +352,7 @@ const products = [{
   condition: "Bundled",
   price: 15,
 originalPrice: 20,
-  stock: 1,
+  stock: 3,
   image: "./images/Bottomfeeder.png",
   featured: 14
 },
@@ -398,13 +398,12 @@ originalPrice: 53,
 },
 {
   id: 15,
-  name: "Weather Effect Name",
+  name: "Weather Snow",
   category: "Weather",
-  rarity: "Weather",
-  condition: "Bundled",
-  price: 100,
+  rarity: "Genuine",
+  price: 200,
   stock: 1,
-  image: "./images/weather.png",
+  image: "./images/Snow.png",
   featured: 15
 },
 
