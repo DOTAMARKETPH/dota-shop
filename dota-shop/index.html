@@ -8,158 +8,321 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-<header class="topbar">
-  <a class="brand" href="#market" aria-label="Dota Shop home">
-    <img class="brand-logo" src="./images/dota-logo.png" alt="Dota Shop Logo">
-  </a>
 
-  <nav class="nav-links">
-    <a class="active" href="#market" data-nav="market">Dota Market</a>
-    <a href="#cache-sets" data-nav="cache-sets">Cache Sets</a>
+  <!-- HEADER -->
+  <header class="topbar">
+    <a class="brand" href="#market" aria-label="Dota Shop home">
+      <img class="brand-logo" src="./images/dota-logo.png" alt="Dota Shop Logo">
+    </a>
 
-    <a href="https://www.facebook.com/carl.ike.353"
-       target="_blank"
-       rel="noopener noreferrer">Facebook ↗</a>
+    <nav class="nav-links">
+      <a class="active" href="#market" data-nav="market">Dota Market</a>
+      <a href="#cache-sets" data-nav="cache-sets">Cache Sets</a>
 
-    <a href="https://steamcommunity.com/profiles/76561198882217339/"
-       target="_blank"
-       rel="noopener noreferrer">Steam ↗</a>
-  </nav>
+      <a href="https://www.facebook.com/carl.ike.353"
+         target="_blank"
+         rel="noopener noreferrer">Facebook ↗</a>
 
-  <div class="header-actions">
-    <label class="search-wrap" aria-label="Search items">
-      <span>⌕</span>
-      <input id="searchInput" type="search" placeholder="Search items...">
-    </label>
-    <button class="cart-button" id="cartButton">
-      Cart <span id="cartCount">0</span>
-    </button>
-  </div>
-</header>
+      <a href="https://steamcommunity.com/profiles/76561198882217339/"
+         target="_blank"
+         rel="noopener noreferrer">Steam ↗</a>
+    </nav>
 
-  
+    <div class="header-actions">
+      <label class="search-wrap" aria-label="Search items">
+        <span>⌕</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search all Dota 2 items..."
+          aria-label="Search all Dota 2 items"
+        >
+      </label>
+
+      <button class="cart-button" id="cartButton" type="button">
+        <svg
+          class="cart-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="19"
+          height="19"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>Cart</span>
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
   <main>
+
+    <!-- DOTA MARKET AND HERO DESCRIPTION -->
     <section class="market-section" id="market">
+
+      <div class="hero-description">
+        <p class="eyebrow">WELCOME TO DOTA SHOP</p>
+        <h1>Discover Your Next Dota 2 Items</h1>
+        <p>
+          Explore Arcana, Immortals, rare cosmetics, Weather effects,
+          and exclusive Cache Sets. Find your favorite items and
+          upgrade your collection today.
+        </p>
+      </div>
+
+      <!-- MARKET HEADING: KEEP ONLY ONE -->
       <div class="section-heading">
-        <div><p class="eyebrow">DOTA 2 COSMETICS</p><h2>Dota Market</h2></div>
-        <label class="sort-label">Sort by
-          <select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name: A–Z</option></select>
+        <div>
+          <p class="eyebrow">DOTA 2 COSMETICS</p>
+          <h2>Dota Market</h2>
+        </div>
+
+        <label class="sort-label">
+          Sort by
+          <select id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
         </label>
       </div>
+
+      <!-- MARKET LAYOUT -->
       <div class="market-layout">
+
+        <!-- CATEGORY SIDEBAR -->
         <aside class="sidebar">
           <h3>Categories</h3>
-          <button class="category active" data-category="All">◈ <span>All items</span><small id="countAll"></small></button>
-          <button class="category" data-category="Arcana">⬡ <span>Arcana</span></button>
-          <button class="category" data-category="Immortals">✦ <span>Immortals</span></button>
-          <button class="category" data-category="Mix Sets">◌ <span>Mix Sets</span></button>
-          <div class="sidebar-note"><span>◆</span><b>Collector's corner</b><p>Find a new look for your favorite hero.</p></div>
+
+          <button class="category active" data-category="All" type="button">
+            ◈ <span>All items</span>
+            <small id="countAll">0 pcs</small>
+          </button>
+
+          <button class="category" data-category="Arcana" type="button">
+            ⬡ <span>Arcana</span>
+            <small id="countArcana">0 pcs</small>
+          </button>
+
+          <button class="category" data-category="Immortal" type="button">
+            ✦ <span>Immortal</span>
+            <small id="countImmortals">0 pcs</small>
+          </button>
+
+          <button class="category" data-category="Weather" type="button">
+            ☁ <span>Weather</span>
+            <small id="countWeather">0 pcs</small>
+          </button>
+
+          <button class="category" data-category="Mix/Sets" type="button">
+            ◌ <span>Mix/Sets</span>
+            <small id="countMixSets">0 pcs</small>
+          </button>
+
+          <div class="sidebar-note">
+            <span>◆</span>
+            <b>Collector's corner</b>
+            <p>Find a new look for your favorite hero.</p>
+          </div>
         </aside>
+
+        <!-- PRODUCT LISTINGS -->
         <div class="products-area">
-          
-<div class="results-line">
-  <span id="resultsText">items</span>
-</div>
+          <div class="results-line">
+            <span id="resultsText">items</span>
+          </div>
 
           <div class="product-grid" id="productGrid"></div>
-          <div class="empty-state" id="emptyState" hidden>No items found. Try another search or category.</div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            No items found. Try another search or category.
+          </div>
         </div>
+
       </div>
     </section>
 
+    <!-- CACHE SETS -->
     <section class="market-section cache-section" id="cache-sets">
+
       <div class="section-heading">
+
         <div class="cache-notice">
-  <strong>Important Notice</strong>
-  <p>
-    Cache sets are giftable only, 30days friend waiting time. If you want to avail the sets,
-    just message me on my Facebook account in the Facebook tab.
-  </p>
-</div>
+          <strong>Important Notice</strong>
+          <p>
+            Cache sets are giftable only, with a 30-day friend waiting period.
+            If you want to purchase a set, message me through my Facebook
+            account using the Facebook tab.
+          </p>
+        </div>
+
         <div>
           <p class="eyebrow">COLLECTOR'S COLLECTION</p>
           <h2>Cache Sets</h2>
           <p class="cache-description">Browse your listed Dota 2 Cache sets.</p>
         </div>
+
       </div>
+
       <div class="product-grid" id="cacheSetGrid"></div>
+
       <div class="empty-state" id="cacheEmptyState" hidden>
-        No Cache Sets listed yet. Add items in script.js and set their category to "Cache sets".
+        No Cache Sets listed yet. Add items in script.js and set their
+        category to "Cache Sets".
       </div>
+
     </section>
 
   </main>
 
-  <footer><span>Made for the battlefield. Built for collectors.</span><span>© 2026 Dota Shop</span></footer>
+  <!-- FOOTER -->
+  <footer>
+    <span>Made for the battlefield. Built for collectors.</span>
+    <span>© 2026 Dota Shop</span>
+  </footer>
 
+  <!-- TOAST NOTIFICATION -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- SHOPPING CART -->
   <div class="cart-overlay" id="cartOverlay" hidden>
-    <button class="overlay-backdrop" id="closeCartBackdrop" aria-label="Close cart"></button>
-    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
-      <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Shopping cart</h2></div><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+
+    <button
+      class="overlay-backdrop"
+      id="closeCartBackdrop"
+      aria-label="Close cart"
+      type="button"
+    ></button>
+
+    <aside
+      class="cart-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cartTitle"
+    >
+
+      <div class="cart-head">
+        <div>
+          <p class="eyebrow">YOUR SELECTION</p>
+
+          <h2 id="cartTitle" class="cart-title">
+            <svg
+              class="cart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Shopping cart</span>
+          </h2>
+        </div>
+
+        <button class="icon-button" id="closeCart" aria-label="Close cart" type="button">
+          ×
+        </button>
+      </div>
+
       <div class="cart-items" id="cartItems"></div>
-      <div class="cart-footer"><div class="total-row"><span>Estimated total</span><strong id="cartTotal">₱0</strong></div>
-      <button class="primary-button checkout-button" id="checkoutButton">
-  Proceed to Payment <span>↗</span>
-</button>
-<p>Choose GCash or MariBank to continue with payment.</p></div>
+
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Estimated total</span>
+          <strong id="cartTotal">₱0</strong>
+        </div>
+
+        <button class="primary-button checkout-button" id="checkoutButton" type="button">
+          Proceed to Payment <span>↗</span>
+        </button>
+
+        <p>Choose GCash or MariBank to continue with payment.</p>
+      </div>
+
     </aside>
   </div>
+
   <!-- PAYMENT POPUP -->
-<div class="payment-overlay" id="paymentOverlay" hidden>
-  <div class="payment-modal">
-    <button class="payment-close" id="closePayment">×</button>
+  <div class="payment-overlay" id="paymentOverlay" hidden>
+    <div class="payment-modal">
 
-    <h2>Choose Your Payment Method</h2>
-    <p class="payment-total">
-      Total to Pay: <strong id="paymentTotal">₱0.00</strong>
-    </p>
-
-    <div class="payment-options">
-      <button class="payment-option" data-payment="gcash">
-        GCash
+      <button class="payment-close" id="closePayment" type="button" aria-label="Close payment">
+        ×
       </button>
 
-      <button class="payment-option" data-payment="maribank">
-        MariBank
-      </button>
-    </div>
+      <h2>Choose Your Payment Method</h2>
 
-    <div id="paymentDetails" hidden>
-      <h3 id="paymentName"></h3>
-      <img id="paymentQR" src="" alt="Payment QR code">
-
-      <p>
-        Scan the QR code using your selected payment app and pay
-        the exact amount shown above.
+      <p class="payment-total">
+        Total to Pay: <strong id="paymentTotal">₱0.00</strong>
       </p>
 
-      <label for="receiptUpload">Upload your payment receipt</label>
-      <input
-        type="file"
-        id="receiptUpload"
-        accept="image/*"
-      >
+      <div class="payment-options">
+        <button class="payment-option" data-payment="gcash" type="button">
+          GCash
+        </button>
 
-      <p class="payment-notice">
-        After completing your payment, please message me through
-        my Facebook account in the Facebook tab. Send a screenshot
-        of your payment receipt together with the ordered items so I can verify your transaction
-        and process your order.
-      </p>
+        <button class="payment-option" data-payment="maribank" type="button">
+          MariBank
+        </button>
+      </div>
 
-      <a
-        href="https://www.facebook.com/carl.ike.353"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="facebook-payment-link"
-      >
-        Message me on Facebook
-      </a>
+      <div id="paymentDetails" hidden>
+        <h3 id="paymentName"></h3>
+
+        <img id="paymentQR" src="" alt="Payment QR code">
+
+        <p>
+          Scan the QR code using your selected payment app and pay
+          the exact amount shown above.
+        </p>
+
+        <label for="receiptUpload">Upload your payment receipt</label>
+        <input
+          type="file"
+          id="receiptUpload"
+          accept="image/*"
+        >
+
+        <p class="payment-notice">
+          After completing your payment, please message me through
+          my Facebook account in the Facebook tab. Send a screenshot
+          of your payment receipt together with the ordered items so I can
+          verify your transaction and process your order.
+        </p>
+
+        <a
+          href="https://www.facebook.com/carl.ike.353"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="facebook-payment-link"
+        >
+          Message me on Facebook
+        </a>
+      </div>
+
     </div>
   </div>
-</div>
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
+```
