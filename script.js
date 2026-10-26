@@ -206,7 +206,7 @@ const products = [
     rarity: "Mythical",
     price: 175,
     originalPrice: 219,
-    stock: 1,
+    stock: 0,
     image: "./infused/Infused Armor of the Fearful Aria.png",
     featured: 38
   },
@@ -658,7 +658,7 @@ originalPrice: 53,
   condition: "Bundled",
   price: 150,
   originalPrice: 188,
-  stock: 1,
+  stock: 0,
   image: "./images/Chasm of the Broken Code.png",
   featured: 17
 },
