@@ -4,6 +4,530 @@
    ======================================== */
 // PRODUCT LISTINGS
 const products = [
+  {
+    id: 104,
+    name: "Wasteland Rattler",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Snapfire",
+    price: 150,
+    stock: 5,
+    image: "./cache/Wasteland Rattler.png",
+    featured: 104
+  },
+  {
+    id: 103,
+    name: "Undying Love",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Undying",
+    price: 400,
+    stock: 1,
+    image: "./cache/Undying Love.png",
+    featured: 103
+  },
+  {
+    id: 102,
+    name: "Unchained Entropy",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Ancient Apparition",
+    price: 150,
+    stock: 1,
+    image: "./cache/Unchained Entropy.png",
+    featured: 102
+  },
+  {
+    id: 101,
+    name: "Thundervolt",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Zues",
+    price: 180,
+    stock: 1,
+    image: "./cache/Thundervolt.png",
+    featured: 101
+  },
+   {
+    id: 100,
+    name: "The White Widow",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Broodmother",
+    price: 180,
+    stock: 2,
+    image: "./cache/The White Widow.png",
+    featured: 100
+  },
+   {
+    id: 99,
+    name: "The Burning Sentinel",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Dawnbreaker",
+    price: 100,
+    stock: 5,
+    image: "./cache/The Burning Sentinel.png",
+    featured: 99
+  },
+   {
+    id: 98,
+    name: "Taurhorn Terror",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Spirit Breaker",
+    price: 130,
+    stock: 4,
+    image: "./cache/Taurhorn Terror.png",
+    featured: 98
+  },
+   {
+    id: 97,
+    name: "Svarof the Infernal",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Primal Beast",
+    price: 150,
+    stock: 2,
+    image: "./cache/Svarog the Infernal.png",
+    featured: 97
+  },
+  {
+    id: 96,
+    name: "Starforge Reformer",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Dawnbreaker",
+    price: 150,
+    stock: 1,
+    image: "./cache/Starforge Reformer.png",
+    featured: 96
+  },
+  {
+    id: 95,
+    name: "Spellbreaker's Braid",
+    category: "Cache Sets",
+    condition: "Bundled",
+    rarity: "Persona",
+    hero: "Anti Mage",
+    price: 350,
+    stock: 4,
+    image: "./cache/Spellbreaker's Braid.png",
+    featured: 95
+  },
+  {
+    id: 94,
+    name: "Sodbustin' Saboteurs",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Teachies",
+    price: 180,
+    stock: 1,
+    image: "./cache/Sodbustin' Saboteurs.png",
+    featured: 94
+  },
+  {
+    id: 93,
+    name: "Shellshock Saturnalia",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Snapfire",
+    price: 200,
+    stock: 1,
+    image: "./cache/Shellshock Saturnalia.png",
+    featured: 93
+  },
+  {
+    id: 92,
+    name: "Shadow Stalker",
+    category: "Cache Sets",
+    condition: "Bundled",
+    rarity: "Persona",
+    hero: "Phantom Assassin",
+    price: 350,
+    stock: 2,
+    image: "./cache/Shadow Stalker.png",
+    featured: 92
+  },
+  {
+    id: 91,
+    name: "Serket of the Black Sands",
+    category: "Cache Sets",
+    condition: "Bundled",
+    rarity: "Immortal",
+    hero: "Sand King",
+    price: 1200,
+    stock: 1,
+    image: "./cache/Serket of the Black Sands.png",
+    featured: 91
+  },
+  {
+    id: 90,
+    name: "Seeker of the Crescent Wheel",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Luna",
+    price: 180,
+    stock: 2,
+    image: "./cache/Seeker of the Crescent Wheel.png",
+    featured: 90
+  },
+  {
+    id: 89,
+    name: "Seed of Strife",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Chen",
+    price: 150,
+    stock: 1,
+    image: "./cache/Seed of Strife.png",
+    featured: 89
+  },
+  {
+    id: 88,
+    name: "School of the Solar Fang",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Marci",
+    price: 130,
+    stock: 4,
+    image: "./cache/School of the Solar Fang.png",
+    featured: 88
+  },
+  {
+    id: 87,
+    name: "Rotzo the Clown",
+    category: "Cache Sets",
+    condition: "Bundled",
+    rarity: "Immortal",
+    hero: "Pudge",
+    price: 400,
+    stock: 2,
+    image: "./cache/Rotzo the Clown.png",
+    featured: 87
+  },
+  {
+    id: 86,
+    name: "Rot-Iron Ripper",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Necrophose",
+    price: 180,
+    stock: 2,
+    image: "./cache/Rot Iron Ripper.png",
+    featured: 86
+  },
+  {
+    id: 85,
+    name: "Red Dawn",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Dawnbreaker",
+    price: 150,
+    stock: 5,
+    image: "./cache/Red Dawn.png",
+    featured: 85
+  },
+  {
+    id: 84,
+    name: "Prehistoric Predator",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Primal Beast",
+    price: 150,
+    stock: 1,
+    image: "./cache/Prehistoric Predator.png",
+    featured: 84
+  },
+  {
+    id: 83,
+    name: "Pallbringer",
+    category: "Cache Sets",
+    condition: "Bundled",
+    rarity: "Immortal",
+    hero: "Earth Shaker",
+    price: 450,
+    stock: 1,
+    image: "./cache/Pallbringer.png",
+    featured: 83
+  },
+  {
+    id: 82,
+    name: "Needlepoint Necromancer",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Dazzle",
+    price: 150,
+    stock: 2,
+    image: "./cache/Needlepoint Necromancer.png",
+    featured: 82
+  },
+  {
+    id: 81,
+    name: "Mechamancer",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Venomancer",
+    rarity: "Very Rare",
+    price: 600,
+    stock: 1,
+    image: "./cache/Mechamancer.png",
+    featured: 81
+  },
+  {
+    id: 80,
+    name: "Mecha Nyx",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Nyx Assassin",
+    price: 150,
+    stock: 1,
+    image: "./cache/Mecha Nyx.png",
+    featured: 80
+  },
+  {
+    id: 79,
+    name: "Martyrdom of the Brineborn",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Naga Siren",
+    price: 150,
+    stock: 1,
+    image: "./cache/Martyrdom of the Brineborn.png",
+    featured: 79
+  },
+  {
+    id: 78,
+    name: "Mariposa Mori",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Muerta",
+    price: 180,
+    stock: 5,
+    image: "./cache/Mariposa Mori.png",
+    featured: 78
+  },
+  {
+    id: 77,
+    name: "Lord of the Sundered Souls",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Shadow Fiend",
+    price: 250,
+    stock: 2,
+    image: "./cache/Lord of the Sundered Souls.png",
+    featured: 77
+  },
+  {
+    id: 76,
+    name: "Little Red",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Marci",
+    price: 200,
+    stock: 1,
+    image: "./cache/Little Red.png",
+    featured: 76
+  },
+  {
+    id: 75,
+    name: "Laurels of the Dawnstar",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Marci",
+    price: 150,
+    stock: 1,
+    image: "./cache/Laurels of the Dawnstar.png",
+    featured: 75
+  },
+  {
+    id: 74,
+    name: "Harrow's Harvest",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Ringmaster",
+    price: 150,
+    stock: 2,
+    image: "./cache/Harrow's Harvest.png",
+    featured: 74
+  },
+  {
+    id: 73,
+    name: "Hare of the Cog",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Clockwerk",
+    price: 150,
+    stock: 2,
+    image: "./cache/Hare of the Cog.png",
+    featured: 73
+  },
+  {
+    id: 72,
+    name: "Graviton Blackguard",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Enigma",
+    price: 150,
+    stock: 1,
+    image: "./cache/Graviton Blackguard.png",
+    featured: 72
+  },
+  {
+    id: 71,
+    name: "Glutton of Punishment",
+    category: "Cache Sets",
+    condition: "Bundled",
+    rarity: "Persona",
+    hero: "Pudge",
+    price: 350,
+    stock: 3,
+    image: "./cache/Glutton of Punishment.png",
+    featured: 71
+  },
+  {
+    id: 70,
+    name: "Frozen Nova",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Ancient Apparition",
+    price: 150,
+    stock: 1,
+    image: "./cache/Frozen Nova.png",
+    featured: 70
+  },
+  {
+    id: 69,
+    name: "Foreseen Horizons",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Oracle",
+    price: 150,
+    stock: 3,
+    image: "./cache/Foreseen Horizons.png",
+    featured: 69
+  },
+  {
+    id: 68,
+    name: "Faithful Fortune",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Marci",
+    price: 150,
+    stock: 2,
+    image: "./cache/Faithful Fortune.png",
+    featured: 68
+  },
+  {
+    id: 67,
+    name: "Elegy of the Reaper",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Grimstroke",
+    price: 150,
+    stock: 1,
+    image: "./cache/Elegy of the Reaper.png",
+    featured: 67
+  },
+  {
+    id: 66,
+    name: "Crystal Colossus",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Spirit Breaker", 
+    rarity: "Very Rare",
+    price: 1000,
+    stock: 1,
+    image: "./cache/Crystal Colossus.png",
+    featured: 66
+  },
+  {
+    id: 65,
+    name: "Bloodzo the Bear",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Ursa",
+    price: 150,
+    stock: 1,
+    image: "./cache/Bloodzo the Bear.png",
+    featured: 65
+  },
+  {
+    id: 64,
+    name: "Bloodmoon Stalker",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Luna",
+    price: 400,
+    stock: 6,
+    image: "./cache/Bloodmoon Stalker.png",
+    featured: 64
+  },
+  {
+    id: 63,
+    name: "Blinding Bastion",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Omniknight",
+    price: 150,
+    stock: 2,
+    image: "./cache/Blinding Bastion.png",
+    featured: 63
+  },
+  {
+    id: 62,
+    name: "Blackwing Bandolera",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Muerta",
+    price: 200,
+    stock: 2,
+    image: "./cache/Blackwing Bandolera.png",
+    featured: 62
+  },
+  {
+    id: 61,
+    name: "Bilge Rat Buccaneer",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Hoodwink",
+    price: 130,
+    stock: 2,
+    image: "./cache/Bilge Rat Buccaneer.png",
+    featured: 61
+  },
+   {
+    id: 60,
+    name: "Ardalan Arsonist",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Dark Willow",
+    price: 250,
+    stock: 1,
+    image: "./cache/Ardalan Arsonist.png",
+    featured: 60
+  },
+   {
+    id: 59,
+    name: "Ardalan Arms Race",
+    category: "Cache Sets",
+    condition: "Bundled",
+    hero: "Snapfire",
+    price: 250,
+    stock: 2,
+    image: "./cache/Ardalan Arms Race.png",
+    featured: 59
+  },
+  {
+    id: 58,
+    name: "Angel of the Abyss",
+    category: "Cache Sets",
+    condition: "Bundled",
+    price: 200,
+    stock: 2,
+    image: "./cache/Angel of the Abyss.png",
+    featured: 58
+  },
    {
     id: 56,
     name: "Mega-Kills: Cave Johnson",
@@ -858,11 +1382,13 @@ ${
   <p class="product-hero">${product.hero}</p>
 ` : ""}
 
-  ${product.condition ? `
-    <span class="item-condition ${product.condition === "Bundled" ? "bundled" : "unbundled"}">
-      ${product.condition}
-    </span>
-  ` : ""}
+  ${
+  (product.category || "").trim().toLowerCase() === "cache sets"
+    ? `<span class="item-condition giftable">GIFTABLE ONLY</span>`
+    : `<span class="item-condition tradable-marketable">
+         TRADABLE / MARKETABLE
+       </span>`
+}
 
 
         <p class="stock-label ${product.stock <= 0 ? "sold-out" : ""}">
@@ -941,10 +1467,12 @@ function renderCacheSets() {
         ` : ""}
 
         ${product.condition ? `
-          <span class="item-condition ${
-            product.condition === "Bundled" ? "bundled" : "unbundled"
-          }">${product.condition}</span>
-        ` : ""}
+  <span class="item-condition ${
+    product.condition === "Bundled" ? "bundled" : "unbundled"
+  }">${product.condition}</span>
+` : ""}
+
+<span class="item-condition giftable">GIFTABLE ONLY</span>
 
         <p class="stock-label">
           ${product.stock} piece${product.stock === 1 ? "" : "s"} available
@@ -1016,54 +1544,75 @@ function addToCart(id) {
 // ========================================
 
 function renderCart() {
-  const count = cart.reduce(
-    (sum, item) => sum + item.qty,
-    0
-  );
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
 
   document.getElementById("cartCount").textContent = count;
 
-  const cartItems = document.getElementById("cartItems");
+  const items = document.getElementById("cartItems");
 
   if (!cart.length) {
-    cartItems.innerHTML = `
+    items.innerHTML = `
       <div class="cart-empty">
         Your cart is empty.<br>
         Explore the market and add an item.
       </div>
     `;
   } else {
-    cartItems.innerHTML = cart.map((item) => {
-      const product = products.find(
-        (entry) => entry.id === item.id
-      );
+    items.innerHTML = cart.map(item => {
+      const p = products.find(product => product.id === item.id);
 
       return `
         <div class="cart-row">
-          <div class="cart-thumb" style="color:${product.glow || "#8751c4"}">
-            ${product.symbol || "✦"}
+
+          <div class="cart-thumb" style="color:${p.glow || "#8751c4"}">
+            ${p.symbol || "✦"}
           </div>
 
-          <div>
-            <strong>${product.name}</strong>
-            <small>${money(product.price)} × ${item.qty}</small>
-            <button class="remove-button" data-remove="${product.id}">
+          <div class="cart-item-details">
+
+            <strong>${p.name}</strong>
+
+            <small>${money(p.price)} each</small>
+
+            <div class="quantity-controls">
+
+              <button
+                class="quantity-button"
+                data-decrease="${p.id}"
+                aria-label="Decrease quantity">
+                −
+              </button>
+
+              <span class="quantity-number">${item.qty}</span>
+
+              <button
+                class="quantity-button"
+                data-increase="${p.id}"
+                aria-label="Increase quantity"
+                ${item.qty >= p.stock ? "disabled" : ""}>
+                +
+              </button>
+
+            </div>
+
+            <button class="remove-button" data-remove="${p.id}">
               Remove
             </button>
+
           </div>
 
-          <strong>${money(product.price * item.qty)}</strong>
+          <strong class="cart-item-total">
+            ${money(p.price * item.qty)}
+          </strong>
+
         </div>
       `;
     }).join("");
   }
 
   const total = cart.reduce((sum, item) => {
-    const product = products.find(
-      (entry) => entry.id === item.id
-    );
-
-    return sum + product.price * item.qty;
+    const p = products.find(product => product.id === item.id);
+    return sum + p.price * item.qty;
   }, 0);
 
   document.getElementById("cartTotal").textContent = money(total);
@@ -1147,16 +1696,58 @@ document.querySelectorAll(".nav-links a[data-nav]").forEach((link) => {
 // REMOVE ITEMS FROM CART
 // ========================================
 
-document.getElementById("cartItems").addEventListener("click", (event) => {
-  const button = event.target.closest("[data-remove]");
+// SHOPPING CART QUANTITY CONTROLS
+document.getElementById("cartItems").addEventListener("click", event => {
 
-  if (button) {
-    cart = cart.filter(
-      (item) => item.id !== Number(button.dataset.remove)
-    );
+  // INCREASE QUANTITY
+  const increaseButton = event.target.closest("[data-increase]");
+
+  if (increaseButton) {
+    const id = Number(increaseButton.dataset.increase);
+    const product = products.find(p => p.id === id);
+    const item = cart.find(p => p.id === id);
+
+    if (product && item && item.qty < product.stock) {
+      item.qty++;
+      renderCart();
+    } else {
+      showToast("You have reached the available stock!");
+    }
+
+    return;
+  }
+
+  // DECREASE QUANTITY
+  const decreaseButton = event.target.closest("[data-decrease]");
+
+  if (decreaseButton) {
+    const id = Number(decreaseButton.dataset.decrease);
+    const item = cart.find(p => p.id === id);
+
+    if (item) {
+      item.qty--;
+
+      if (item.qty <= 0) {
+        cart = cart.filter(p => p.id !== id);
+      }
+
+      renderCart();
+    }
+
+    return;
+  }
+
+  // REMOVE ITEM COMPLETELY
+  const removeButton = event.target.closest("[data-remove]");
+
+  if (removeButton) {
+    const id = Number(removeButton.dataset.remove);
+
+    cart = cart.filter(item => item.id !== id);
 
     renderCart();
   }
+
 });
 
 // ========================================

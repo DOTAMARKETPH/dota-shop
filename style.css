@@ -1,9 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 /* =========================
    GLOBAL STYLES
 ========================= */
+
 :root {
   --bg: #111317;
   --panel: #191c22;
@@ -55,6 +55,7 @@ img {
 /* =========================
    HEADER AND NAVIGATION
 ========================= */
+
 .topbar {
   min-height: 76px;
   padding: 0 6.5%;
@@ -213,6 +214,7 @@ img {
 /* =========================
    HERO SECTION
 ========================= */
+
 .hero {
   margin: 28px auto 0;
   width: 87%;
@@ -458,6 +460,7 @@ img {
 /* =========================
    MARKET SECTION
 ========================= */
+
 .market-section {
   width: 87%;
   max-width: 1400px;
@@ -604,6 +607,7 @@ h2 {
 /* =========================
    PRODUCT CARDS
 ========================= */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -650,8 +654,8 @@ h2 {
   pointer-events: none;
 }
 
-
 /* PRODUCT IMAGE BOX */
+
 .product-art {
   height: 220px;
   width: 100%;
@@ -664,6 +668,7 @@ h2 {
 }
 
 /* FIT EVERY PRODUCT IMAGE INSIDE THE BOX */
+
 .product-art .product-image {
   display: block;
   width: 100%;
@@ -677,7 +682,6 @@ h2 {
   position: relative;
   z-index: 1;
 }
-
 
 .item-symbol {
   font-size: 48px;
@@ -717,6 +721,7 @@ h2 {
 }
 
 /* Hero name displayed on product cards */
+
 .product-hero {
   color: #c9a5ff;
   font-size: 11px;
@@ -773,6 +778,7 @@ h2 {
 }
 
 /* Item condition labels */
+
 .item-condition {
   display: inline-block;
   align-self: flex-start;
@@ -799,6 +805,7 @@ h2 {
 /* =========================
    CACHE SETS SECTION
 ========================= */
+
 .cache-section {
   border-top: 1px solid #2a2e36;
   padding-top: 34px;
@@ -884,7 +891,6 @@ h2 {
   z-index: 1;
 }
 
-
 #cacheSetGrid .cache-card-image.is-missing {
   display: none;
 }
@@ -922,6 +928,7 @@ h2 {
 /* =========================
    HOW IT WORKS
 ========================= */
+
 .how-section {
   width: 87%;
   max-width: 1400px;
@@ -975,6 +982,7 @@ h2 {
 /* =========================
    FOOTER
 ========================= */
+
 footer {
   display: flex;
   align-items: center;
@@ -994,6 +1002,7 @@ footer .brand {
 /* =========================
    TOAST MESSAGE
 ========================= */
+
 .toast {
   position: fixed;
   bottom: 24px;
@@ -1018,6 +1027,7 @@ footer .brand {
 /* =========================
    SHOPPING CART OVERLAY
 ========================= */
+
 .cart-overlay {
   position: fixed;
   inset: 0;
@@ -1171,6 +1181,7 @@ footer .brand {
 /* =========================
    RESPONSIVE: TABLETS
 ========================= */
+
 @media (max-width: 1050px) {
   .topbar {
     padding: 0 4%;
@@ -1218,6 +1229,7 @@ footer .brand {
 /* =========================
    RESPONSIVE: MOBILE
 ========================= */
+
 @media (max-width: 760px) {
   .topbar {
     display: flex;
@@ -1392,6 +1404,7 @@ footer .brand {
 /* =========================
    RESPONSIVE: SMALL PHONES
 ========================= */
+
 @media (max-width: 420px) {
   .brand {
     font-size: 13px;
@@ -1473,26 +1486,29 @@ footer .brand {
   .cart-drawer {
     padding: 18px;
   }
+
   /* Discounted product prices */
-.price-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3px;
+
+  .price-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .original-price {
+    color: #999;
+    font-size: 13px;
+    text-decoration: line-through;
+  }
+
+  .price-stack .price {
+    color: #ff4d4d;
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
-.original-price {
-  color: #999;
-  font-size: 13px;
-  text-decoration: line-through;
-}
-
-.price-stack .price {
-  color: #ff4d4d;
-  font-size: 20px;
-  font-weight: bold;
-}
-}
 /* =========================
    DISCOUNTED PRODUCT PRICES
 ========================= */
@@ -1518,6 +1534,7 @@ footer .brand {
 }
 
 /* Discount badge */
+
 .product-art {
   position: relative;
 }
@@ -1549,4 +1566,226 @@ footer .brand {
     font-size: 9px;
     padding: 5px 6px;
   }
+
+  /* Stack item condition and giftability labels vertically */
+
+  .item-condition.giftable {
+    display: block;
+    width: fit-content;
+    margin-top: 6px;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: rgba(201, 165, 255, 0.12);
+    color: #c9a5ff;
+    border: 1px solid rgba(201, 165, 255, 0.4);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+}
+
+/* ========================================
+   CACHE SET IMAGE SIZE FIX
+   Smaller images, perfectly fitted in boxes
+======================================== */
+
+#cacheSetGrid .product-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Cache Set pictures */
+
+#cacheSetGrid .product-art img,
+#cacheSetGrid .product-art .cache-card-image {
+  display: block !important;
+  width: 82% !important;
+  height: 82% !important;
+  max-width: 82% !important;
+  max-height: 82% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Keep images properly sized on smaller screens */
+
+@media (max-width: 760px) {
+  #cacheSetGrid .product-art img,
+  #cacheSetGrid .product-art .cache-card-image {
+    width: 82% !important;
+    height: 82% !important;
+    max-width: 82% !important;
+    max-height: 82% !important;
+    object-fit: contain !important;
+  }
+}
+
+/* TRADABLE / MARKETABLE LABEL */
+
+.item-condition.tradable-marketable {
+  background: rgba(70, 180, 120, 0.12);
+  color: #65d69a;
+  border: 1px solid rgba(70, 180, 120, 0.4);
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* TRADABLE / MARKETABLE LABEL */
+
+.item-condition.tradable-marketable {
+  background: rgba(70, 180, 120, 0.12);
+  color: #65d69a;
+  border: 1px solid rgba(70, 180, 120, 0.4);
+}
+
+/* GIFTABLE ONLY LABEL */
+
+.item-condition.giftable {
+  background: rgba(135, 81, 196, 0.12);
+  color: #c9a5ff;
+  border: 1px solid rgba(135, 81, 196, 0.4);
+}
+
+/* =====================================================
+   DOTA SHOP GRID UPDATE
+   5 ITEMS PER ROW ON DESKTOP
+===================================================== */
+
+#productGrid.product-grid,
+#cacheSetGrid.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  align-items: stretch !important;
+}
+
+.products-area {
+  min-width: 0 !important;
+}
+
+#productGrid .product-card,
+#cacheSetGrid .product-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* TABLET: 4 ITEMS PER ROW */
+
+@media screen and (max-width: 1100px) and (min-width: 761px) {
+  #productGrid.product-grid,
+  #cacheSetGrid.product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* MOBILE: 2 ITEMS PER ROW */
+
+@media screen and (max-width: 760px) {
+  #productGrid.product-grid,
+  #cacheSetGrid.product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+}
+
+/* =====================================
+   SHOPPING CART QUANTITY BUTTONS
+===================================== */
+
+.cart-item-details {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.quantity-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #292d35;
+  border: 1px solid #484e59;
+  border-radius: 5px;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.quantity-button:hover:not(:disabled) {
+  background: #ed343b;
+  border-color: #ed343b;
+  color: white;
+}
+
+.quantity-button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.quantity-number {
+  min-width: 18px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cart-item-total {
+  white-space: nowrap;
+  color: white;
+  font-size: 13px;
+}
+
+.cart-row {
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-row .remove-button {
+  color: #ed646a;
+  font-size: 11px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.cart-row .remove-button:hover {
+  color: white;
+  text-decoration: underline;
+}
+body {
+    background-color: #08080b;
+    background-image:
+        linear-gradient(
+            rgba(8, 8, 11, 0.45),
+            rgba(8, 8, 11, 0.65)
+        ),
+        url("./dota-background.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
