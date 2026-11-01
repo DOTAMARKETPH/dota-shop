@@ -44,7 +44,7 @@ const products = [
     condition: "Bundled",
     hero: "Zues",
     price: 180,
-    stock: 1,
+    stock: 0,
     image: "./cache/Thundervolt.png",
     featured: 101
   },
@@ -77,7 +77,7 @@ const products = [
     condition: "Bundled",
     hero: "Spirit Breaker",
     price: 130,
-    stock: 4,
+    stock: 3,
     image: "./cache/Taurhorn Terror.png",
     featured: 98
   },
@@ -99,7 +99,7 @@ const products = [
     condition: "Bundled",
     hero: "Dawnbreaker",
     price: 150,
-    stock: 1,
+    stock: 0,
     image: "./cache/Starforge Reformer.png",
     featured: 96
   },
@@ -459,7 +459,7 @@ const products = [
     condition: "Bundled",
     hero: "Luna",
     price: 400,
-    stock: 6,
+    stock: 5,
     image: "./cache/Bloodmoon Stalker.png",
     featured: 64
   },
