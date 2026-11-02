@@ -554,7 +554,7 @@ const products = [
     category: "Random",
     rarity: "Mythical",
     price: 4,
-    stock: 1,
+    stock: 0,
     image: "./random/Mega-Kills Crystal Maiden.png",
     featured: 55
   },
@@ -564,7 +564,7 @@ const products = [
     category: "Random",
     rarity: "Mythical",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./random/Announcer Crystal Maiden.png",
     featured: 54
   },
@@ -614,7 +614,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./cursor/The International 2016 Cursor Pack.png",
     featured: 48
   },
@@ -634,7 +634,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 2,
+    stock: 1,
     image: "./cursor/Diretide 2020 Cursor Pack.png",
     featured: 46
   },
