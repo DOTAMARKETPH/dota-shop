@@ -882,7 +882,7 @@ const products = [
   condition: "Bundled",
   price: 28,
   originalPrice: 35,
-  stock: 1,
+  stock: 0,
   image: "./images/Plague Baron.png",
   featured: 27
 },
@@ -998,7 +998,7 @@ const products = [
   rarity: "ARCANA",
   price: 1200,
   originalPrice: 1492,
-  stock: 1,
+  stock: 0,
   image: "./images/Pudge-arc.png",
   featured: 1
 },
