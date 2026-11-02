@@ -534,7 +534,7 @@ const products = [
     category: "Random",
     rarity: "Mythical",
     price: 2,
-    stock: 1,
+    stock: 0,
     image: "./random/Mega-Kills Cave Johnson.png",
     featured: 56
   },
@@ -584,7 +584,7 @@ const products = [
     category: "Random",
     rarity: "Mythical",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./random/Mega-Kills Kunkka & Tidehunter.png",
     featured: 52
   },
@@ -634,7 +634,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./cursor/Diretide 2020 Cursor Pack.png",
     featured: 46
   },
@@ -1069,7 +1069,7 @@ const products = [
     category: "Immortal",
     rarity: "Immortal",
     price: 2,
-    stock: 3,
+    stock: 2,
     image: "./images/brood.png",
     featured: 7
   },
@@ -1080,7 +1080,7 @@ const products = [
     category: "Immortal",
     rarity: "Immortal",
     price: 2,
-    stock: 4,
+    stock: 3,
     image: "./images/cent.png",
     featured: 8
   },
