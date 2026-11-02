@@ -1034,7 +1034,7 @@ const products = [
     rarity: "Immortal",
     price: 640,
     originalPrice: 754,
-    stock: 1,
+    stock: 0,
     image: "./images/Golden Scavenging Guttleslug.png",
     featured: 4
   },
@@ -1058,7 +1058,7 @@ const products = [
     rarity: "Immortal",
     price: 280,
     originalPrice: 348,
-    stock: 1,
+    stock: 0,
     image: "./images/The Abscesserator.png",
     featured: 6
   },
