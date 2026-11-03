@@ -658,7 +658,7 @@ const products = [
     rarity: "Rare",
     price: 25,
     originalPrice: 31,
-    stock: 1,
+    stock: 0,
     image: "./kinetic/Kinetic.png",
     featured: 44
   },
@@ -670,7 +670,7 @@ const products = [
     rarity: "Rare",
     price: 52,
     originalPrice: 66,
-    stock: 1,
+    stock: 0,
     image: "./kinetic/Kinetic.png",
     featured: 43
   },
@@ -934,7 +934,7 @@ const products = [
   condition: "Bundled",
   price: 20,
   originalPrice: 26,
-  stock: 1,
+  stock: 0,
   image: "./images/Feast of the Unwilling.png",
   featured: 23
 },
