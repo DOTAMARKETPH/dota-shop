@@ -802,7 +802,7 @@ const products = [
     rarity: "Mythical",
     price: 16,
     originalPrice: 21,
-    stock: 1,
+    stock: 0,
     image: "./taunt/Taunt Hot Eats.png",
     featured: 33
   },
@@ -1046,7 +1046,7 @@ const products = [
     rarity: "Immortal",
     price: 70,
     originalPrice: 87,
-    stock: 1,
+    stock: 0,
     image: "./images/Phantom Concord.png",
     featured: 5
   },
