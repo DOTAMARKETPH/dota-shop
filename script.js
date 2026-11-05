@@ -594,7 +594,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./cursor/Unbroken Stallion Cursor Pack.png",
     featured: 50
   },
@@ -816,7 +816,7 @@ const products = [
   condition: "Bundled",
   price: 16,
   originalPrice: 21,
-  stock: 2,
+  stock: 1,
   image: "./images/Wraith of the Red Sands.png",
   featured: 32
 },
@@ -829,7 +829,7 @@ const products = [
   condition: "Bundled",
   price: 15,
   originalPrice: 20,
-  stock: 1,
+  stock: 0,
   image: "./images/Thornwatch.png",
   featured: 31
 },
@@ -895,7 +895,7 @@ const products = [
   condition: "Bundled",
   price: 24,
   originalPrice: 30,
-  stock: 4,
+  stock: 3,
   image: "./images/Patterns of the Pristine.png",
   featured: 21
 },
@@ -986,7 +986,7 @@ const products = [
   condition: "Bundled",
   price: 30,
   originalPrice: 40,
-  stock: 1,
+  stock: 0,
   image: "./images/Cunning Cultivations.png",
   featured: 19
 },
@@ -1195,7 +1195,7 @@ originalPrice: 53,
   condition: "Bundled",
   price: 15,
   originalPrice: 20,
-  stock: 1,
+  stock: 0,
   image: "./images/Crimsonwing Slayer.png",
   featured: 18
 },
