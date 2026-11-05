@@ -544,7 +544,7 @@ const products = [
     category: "Random",
     rarity: "Mythical",
     price: 2,
-    stock: 2,
+    stock: 0,
     image: "./random/Announcer Pirate Captain.png",
     featured: 57
   },
@@ -816,7 +816,7 @@ const products = [
   condition: "Bundled",
   price: 16,
   originalPrice: 21,
-  stock: 1,
+  stock: 0   ,
   image: "./images/Wraith of the Red Sands.png",
   featured: 32
 },
@@ -842,7 +842,7 @@ const products = [
   condition: "Bundled",
   price: 16,
   originalPrice: 20,
-  stock: 1,
+  stock: 0,
   image: "./images/Surly Bogstomper.png",
   featured: 30
 },
@@ -947,7 +947,7 @@ const products = [
   condition: "Bundled",
   price: 20,
   originalPrice: 25,
-  stock: 2,
+  stock: 1,
   image: "./images/Eye of the Fateweaver.png",
   featured: 22
 },
@@ -1069,7 +1069,7 @@ const products = [
     category: "Immortal",
     rarity: "Immortal",
     price: 2,
-    stock: 2,
+    stock: 1,
     image: "./images/brood.png",
     featured: 7
   },
@@ -1080,7 +1080,7 @@ const products = [
     category: "Immortal",
     rarity: "Immortal",
     price: 2,
-    stock: 3,
+    stock: 2,
     image: "./images/cent.png",
     featured: 8
   },
