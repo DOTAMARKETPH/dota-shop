@@ -4,6 +4,61 @@
 // PRODUCT LISTINGS
 const products = [
   {
+    id: 1004,
+    name: "War Rig Eradicators",
+    category: "Cache Sets",
+    condition: "Unbundled",
+    hero: "Techies",
+    price: 450,
+    stock: 1,
+    image: "./cache/War Rig Eradicators.png",
+    featured: 1004
+  },
+  {
+    id: 1004,
+    name: "Blue Horizons",
+    category: "Cache Sets",
+    condition: "unbundled",
+    hero: "Phoenix",
+    price: 500,
+    stock: 1,
+    image: "./cache/Blue Horizons.png",
+    featured: 1004
+  },
+  {
+    id: 1003,
+    name: "Bird of Prey",
+    category: "Cache Sets",
+    condition: "unbundled",
+    hero: "Legion Commander",
+    price: 700,
+    stock: 1,
+    image: "./cache/Bird of Prey.png",
+    featured: 1003
+  },
+   {
+    id: 1002,
+    name: "Crimson Dawn",
+    category: "Cache Sets",
+    condition: "unbundled",
+    hero: "Phoenix",
+    price: 350,
+    stock: 1,
+    image: "./cache/Crimson Dawn.png",
+    featured: 1002
+  },
+   {
+    id: 1000,
+    name: "Star Sage",
+    category: "Cache Sets",
+    condition: "unbundled",
+    hero: "Phoenix",
+    price: 150,
+    stock: 1,
+    image: "./cache/Star Sage.png",
+    featured: 1000
+  },
+  {
     id: 104,
     name: "Wasteland Rattler",
     category: "Cache Sets",
@@ -889,7 +944,7 @@ const products = [
     hero: "Enigma",
     category: "mix/sets",
     rarity: "Rare",
-    condition: "Bundled",
+    condition: "Unbundled",
     price: 24,
     originalPrice: 30,
     stock: 3,
