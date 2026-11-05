@@ -682,7 +682,7 @@ const products = [
     rarity: "Rare",
     price: 25,
     originalPrice: 31,
-    stock: 1,
+    stock: 0,
     image: "./kinetic/Kinetic.png",
     featured: 42
   },
