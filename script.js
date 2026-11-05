@@ -624,7 +624,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 25,
-    stock: 1,
+    stock: 0,
     image: "./cursor/Genuine DAC 2015 Mirana Cursor Pack.png",
     featured: 47
   },
@@ -855,7 +855,7 @@ const products = [
   condition: "Bundled",
   price: 12,
   originalPrice: 15,
-  stock: 1,
+  stock: 0,
   image: "./images/Song of the Sea Lotus.png",
   featured: 29
 },
@@ -973,7 +973,7 @@ const products = [
   condition: "Bundled",
   price: 15,
   originalPrice: 20,
-  stock: 1,
+  stock: 0,
   image: "./images/Dark Realm Oracles.png",
   featured: 20
 },
@@ -1091,7 +1091,7 @@ const products = [
     category: "Immortal",
     rarity: "Immortal",
     price: 5,
-    stock: 2,
+    stock: 0,
     image: "./images/druid.png",
     featured: 9
   },
