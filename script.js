@@ -1069,7 +1069,7 @@ const products = [
     category: "Immortal",
     rarity: "Immortal",
     price: 2,
-    stock: 1,
+    stock: 0,
     image: "./images/brood.png",
     featured: 7
   },
