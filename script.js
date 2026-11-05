@@ -1169,7 +1169,7 @@ originalPrice: 20,
   condition: "Bundled",
   price: 40,
 originalPrice: 53,
-  stock: 1,
+  stock: 0,
   image: "./images/Candy Cat.png",
   featured: 16
 },
