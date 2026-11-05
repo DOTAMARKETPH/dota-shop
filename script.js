@@ -1,4 +1,3 @@
-
 /* ========================================
    DOTA SHOP - COMPLETE UPDATED SCRIPT
    ======================================== */
@@ -48,7 +47,7 @@ const products = [
     image: "./cache/Thundervolt.png",
     featured: 101
   },
-   {
+  {
     id: 100,
     name: "The White Widow",
     category: "Cache Sets",
@@ -59,7 +58,7 @@ const products = [
     image: "./cache/The White Widow.png",
     featured: 100
   },
-   {
+  {
     id: 99,
     name: "The Burning Sentinel",
     category: "Cache Sets",
@@ -70,7 +69,7 @@ const products = [
     image: "./cache/The Burning Sentinel.png",
     featured: 99
   },
-   {
+  {
     id: 98,
     name: "Taurhorn Terror",
     category: "Cache Sets",
@@ -81,7 +80,7 @@ const products = [
     image: "./cache/Taurhorn Terror.png",
     featured: 98
   },
-   {
+  {
     id: 97,
     name: "Svarof the Infernal",
     category: "Cache Sets",
@@ -217,7 +216,7 @@ const products = [
     image: "./cache/Rot Iron Ripper.png",
     featured: 86
   },
-  {
+    {
     id: 85,
     name: "Red Dawn",
     category: "Cache Sets",
@@ -358,11 +357,11 @@ const products = [
     condition: "Bundled",
     hero: "Clockwerk",
     price: 150,
-    stock: 2,
+    stock: 1,
     image: "./cache/Hare of the Cog.png",
     featured: 73
   },
-  {
+    {
     id: 72,
     name: "Graviton Blackguard",
     category: "Cache Sets",
@@ -434,7 +433,7 @@ const products = [
     name: "Crystal Colossus",
     category: "Cache Sets",
     condition: "Bundled",
-    hero: "Spirit Breaker", 
+    hero: "Spirit Breaker",
     rarity: "Very Rare",
     price: 1000,
     stock: 1,
@@ -496,7 +495,7 @@ const products = [
     image: "./cache/Bilge Rat Buccaneer.png",
     featured: 61
   },
-   {
+  {
     id: 60,
     name: "Ardalan Arsonist",
     category: "Cache Sets",
@@ -507,7 +506,7 @@ const products = [
     image: "./cache/Ardalan Arsonist.png",
     featured: 60
   },
-   {
+  {
     id: 59,
     name: "Ardalan Arms Race",
     category: "Cache Sets",
@@ -528,7 +527,7 @@ const products = [
     image: "./cache/Angel of the Abyss.png",
     featured: 58
   },
-   {
+  {
     id: 56,
     name: "Mega-Kills: Cave Johnson",
     category: "Random",
@@ -558,7 +557,7 @@ const products = [
     image: "./random/Mega-Kills Crystal Maiden.png",
     featured: 55
   },
-  {
+    {
     id: 54,
     name: "Announcer: Crystal Maiden",
     category: "Random",
@@ -618,7 +617,7 @@ const products = [
     image: "./cursor/The International 2016 Cursor Pack.png",
     featured: 48
   },
-   {
+  {
     id: 47,
     name: "Genuine DAC 2015 Mirana Cursor Pack",
     category: "Cursor Pack",
@@ -758,7 +757,7 @@ const products = [
     image: "./taunt/Taunt Step Lively.png",
     featured: 37
   },
-  {
+    {
     id: 36,
     name: "Taunt: Sawed-off Watergun",
     hero: "Morphling",
@@ -806,202 +805,200 @@ const products = [
     image: "./taunt/Taunt Hot Eats.png",
     featured: 33
   },
-  
   {
-  id: 32,
-  name: "Wraith of the Red Sands",
-  hero: "Phantom Lancer",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 16,
-  originalPrice: 21,
-  stock: 0   ,
-  image: "./images/Wraith of the Red Sands.png",
-  featured: 32
-},
+    id: 32,
+    name: "Wraith of the Red Sands",
+    hero: "Phantom Lancer",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 16,
+    originalPrice: 21,
+    stock: 0,
+    image: "./images/Wraith of the Red Sands.png",
+    featured: 32
+  },
   {
-  id: 31,
-  name: "Thornwatch",
-  hero: "Skywrath Mage",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 15,
-  originalPrice: 20,
-  stock: 0,
-  image: "./images/Thornwatch.png",
-  featured: 31
-},
+    id: 31,
+    name: "Thornwatch",
+    hero: "Skywrath Mage",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 15,
+    originalPrice: 20,
+    stock: 0,
+    image: "./images/Thornwatch.png",
+    featured: 31
+  },
   {
-  id: 30,
-  name: "Surly Bogstomper",
-  hero: "Bristleback",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 16,
-  originalPrice: 20,
-  stock: 0,
-  image: "./images/Surly Bogstomper.png",
-  featured: 30
-},
+    id: 30,
+    name: "Surly Bogstomper",
+    hero: "Bristleback",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 16,
+    originalPrice: 20,
+    stock: 0,
+    image: "./images/Surly Bogstomper.png",
+    featured: 30
+  },
   {
-  id: 29,
-  name: "Song of the Sea Lotus",
-  hero: "Naga Siren",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 12,
-  originalPrice: 15,
-  stock: 0,
-  image: "./images/Song of the Sea Lotus.png",
-  featured: 29
-},
-
+    id: 29,
+    name: "Song of the Sea Lotus",
+    hero: "Naga Siren",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 12,
+    originalPrice: 15,
+    stock: 0,
+    image: "./images/Song of the Sea Lotus.png",
+    featured: 29
+  },
   {
-  id: 28,
-  name: "Scorn of the Winged Sentinel",
-  hero: "Luna",
-  category: "mix/sets",
-  rarity: "Mythical",
-  condition: "Bundled",
-  price: 232,
-  originalPrice: 290,
-  stock: 1,
-  image: "./images/Scorn of the Winged Sentinel.png",
-  featured: 28
-},
+    id: 28,
+    name: "Scorn of the Winged Sentinel",
+    hero: "Luna",
+    category: "mix/sets",
+    rarity: "Mythical",
+    condition: "Bundled",
+    price: 232,
+    originalPrice: 290,
+    stock: 1,
+    image: "./images/Scorn of the Winged Sentinel.png",
+    featured: 28
+  },
   {
-  id: 27,
-  name: "Plague Baron",
-  hero: "Necrophose",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 28,
-  originalPrice: 35,
-  stock: 0,
-  image: "./images/Plague Baron.png",
-  featured: 27
-},
+    id: 27,
+    name: "Plague Baron",
+    hero: "Necrophose",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 28,
+    originalPrice: 35,
+    stock: 0,
+    image: "./images/Plague Baron.png",
+    featured: 27
+  },
   {
-  id: 26,
-  name: "Patterns of the Pristine",
-  hero: "Enigma",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 24,
-  originalPrice: 30,
-  stock: 3,
-  image: "./images/Patterns of the Pristine.png",
-  featured: 21
-},
+    id: 26,
+    name: "Patterns of the Pristine",
+    hero: "Enigma",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 24,
+    originalPrice: 30,
+    stock: 3,
+    image: "./images/Patterns of the Pristine.png",
+    featured: 21
+  },
   {
-  id: 25,
-  name: "Night Terrors",
-  hero: "Bat Rider",
-  category: "mix/sets",
-  rarity: "Mythical",
-  condition: "Bundled",
-  price: 100,
-  originalPrice: 133,
-  stock: 2,
-  image: "./images/Night Terrors.png",
-  featured: 25
-},
+    id: 25,
+    name: "Night Terrors",
+    hero: "Bat Rider",
+    category: "mix/sets",
+    rarity: "Mythical",
+    condition: "Bundled",
+    price: 100,
+    originalPrice: 133,
+    stock: 2,
+    image: "./images/Night Terrors.png",
+    featured: 25
+  },
   {
-  id: 24,
-  name: "Hunger of the Howling Wilds",
-  hero: "Riki",
-  category: "mix/sets",
-  rarity: "Mythical",
-  condition: "Bundled",
-  price: 230,
-  originalPrice: 305,
-  stock: 1,
-  image: "./images/Hunger of the Howling Wilds.png",
-  featured: 24
-},
+    id: 24,
+    name: "Hunger of the Howling Wilds",
+    hero: "Riki",
+    category: "mix/sets",
+    rarity: "Mythical",
+    condition: "Bundled",
+    price: 230,
+    originalPrice: 305,
+    stock: 1,
+    image: "./images/Hunger of the Howling Wilds.png",
+    featured: 24
+  },
   {
-  id: 23,
-  name: "Feast of the Unwilling",
-  hero: "Bloodseeker",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 20,
-  originalPrice: 26,
-  stock: 0,
-  image: "./images/Feast of the Unwilling.png",
-  featured: 23
-},
+    id: 23,
+    name: "Feast of the Unwilling",
+    hero: "Bloodseeker",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 20,
+    originalPrice: 26,
+    stock: 0,
+    image: "./images/Feast of the Unwilling.png",
+    featured: 23
+  },
   {
-  id: 22,
-  name: "Eye of the Fateweaver",
-  hero: "Oracle",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 20,
-  originalPrice: 25,
-  stock: 1,
-  image: "./images/Eye of the Fateweaver.png",
-  featured: 22
-},
-   {
-  id: 21,
-  name: "Edge of Extinction"  ,
-  hero: "Beastmaster",
-  category: "mix/sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 20,
-  originalPrice: 25,
-  stock: 5,
-  image: "./images/Edge of Extinction.png",
-  featured: 21
-},
-   {
-  id: 20,
-  name: "Dark Realm Oracles",
-  hero: "Death Prophet",
-  category: "mix/sets",
-  rarity: "rare",
-  condition: "Bundled",
-  price: 15,
-  originalPrice: 20,
-  stock: 0,
-  image: "./images/Dark Realm Oracles.png",
-  featured: 20
-},
-   {
-  id: 19,
-  name: "Cunning cultivation",
-  hero: "Witch Doctor",
-  category: "mix/sets",
-  rarity: "rare",
-  condition: "Bundled",
-  price: 30,
-  originalPrice: 40,
-  stock: 0,
-  image: "./images/Cunning Cultivations.png",
-  featured: 19
-},
+    id: 22,
+    name: "Eye of the Fateweaver",
+    hero: "Oracle",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 20,
+    originalPrice: 25,
+    stock: 1,
+    image: "./images/Eye of the Fateweaver.png",
+    featured: 22
+  },
   {
-  id: 1,
-  name: "Feast of Abscession lvl 1",
-  hero: "Pudge",
-  category: "Arcana",
-  rarity: "ARCANA",
-  price: 1200,
-  originalPrice: 1492,
-  stock: 0,
-  image: "./images/Pudge-arc.png",
-  featured: 1
-},
+    id: 21,
+    name: "Edge of Extinction",
+    hero: "Beastmaster",
+    category: "mix/sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 20,
+    originalPrice: 25,
+    stock: 5,
+    image: "./images/Edge of Extinction.png",
+    featured: 21
+  },
+  {
+    id: 20,
+    name: "Dark Realm Oracles",
+    hero: "Death Prophet",
+    category: "mix/sets",
+    rarity: "rare",
+    condition: "Bundled",
+    price: 15,
+    originalPrice: 20,
+    stock: 0,
+    image: "./images/Dark Realm Oracles.png",
+    featured: 20
+  },
+    {
+    id: 19,
+    name: "Cunning cultivation",
+    hero: "Witch Doctor",
+    category: "mix/sets",
+    rarity: "rare",
+    condition: "Bundled",
+    price: 30,
+    originalPrice: 40,
+    stock: 0,
+    image: "./images/Cunning Cultivations.png",
+    featured: 19
+  },
+  {
+    id: 1,
+    name: "Feast of Abscession lvl 1",
+    hero: "Pudge",
+    category: "Arcana",
+    rarity: "ARCANA",
+    price: 1200,
+    originalPrice: 1492,
+    stock: 0,
+    image: "./images/Pudge-arc.png",
+    featured: 1
+  },
   {
     id: 2,
     name: "Atomic Ray Thrusters",
@@ -1026,7 +1023,7 @@ const products = [
     image: "./images/Genuine Hell's Usher.png",
     featured: 3
   },
-  { 
+  {
     id: 4,
     name: "Golden Scavenging Guttleslug",
     hero: "Pudge",
@@ -1096,7 +1093,7 @@ const products = [
     featured: 9
   },
   {
-  id: 10,
+    id: 10,
     name: "Arcanic Resonance Beam",
     hero: "Tinker",
     category: "Immortal",
@@ -1117,7 +1114,7 @@ const products = [
     originalPrice: 20,
     stock: 1,
     image: "./images/Arcane Infestation.png",
-    featured: 11    
+    featured: 11
   },
   {
     id: 12,
@@ -1145,60 +1142,58 @@ const products = [
     image: "./images/Blackshield Protodrone.png",
     featured: 13
   },
-
   {
-  id: 14,
-  name: "Bottomfeeder",
-  hero: "Nyx Assassin",
-  category: "Mix/Sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 15,
-originalPrice: 20,
-  stock: 3,
-  image: "./images/Bottomfeeder.png",
-  featured: 14
-},
-
- {
-  id: 16,
-  name: "Candy Cat",
-  hero: "Pudge",
-  category: "Mix/Sets",
-  rarity: "Rare",
-  condition: "Bundled",
-  price: 40,
-originalPrice: 53,
-  stock: 0,
-  image: "./images/Candy Cat.png",
-  featured: 16
-},
-{
-  id: 17,
-  name: "Chasm Of The Broken Code",
-  hero: "Terrorblade",
-  category: "Mix/Sets",
-  rarity: "Mythical",
-  condition: "Bundled",
-  price: 150,
-  originalPrice: 188,
-  stock: 0,
-  image: "./images/Chasm of the Broken Code.png",
-  featured: 17
-},
-{
-  id: 18,
-  name: "Crimsonwing Slayer",
-  hero: "Legion Commander",
-  category: "Mix/Sets",
-  rarity: "Mythical",
-  condition: "Bundled",
-  price: 15,
-  originalPrice: 20,
-  stock: 0,
-  image: "./images/Crimsonwing Slayer.png",
-  featured: 18
-},
+    id: 14,
+    name: "Bottomfeeder",
+    hero: "Nyx Assassin",
+    category: "Mix/Sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 15,
+    originalPrice: 20,
+    stock: 3,
+    image: "./images/Bottomfeeder.png",
+    featured: 14
+  },
+  {
+    id: 16,
+    name: "Candy Cat",
+    hero: "Pudge",
+    category: "Mix/Sets",
+    rarity: "Rare",
+    condition: "Bundled",
+    price: 40,
+    originalPrice: 53,
+    stock: 0,
+    image: "./images/Candy Cat.png",
+    featured: 16
+  },
+  {
+    id: 17,
+    name: "Chasm Of The Broken Code",
+    hero: "Terrorblade",
+    category: "Mix/Sets",
+    rarity: "Mythical",
+    condition: "Bundled",
+    price: 150,
+    originalPrice: 188,
+    stock: 0,
+    image: "./images/Chasm of the Broken Code.png",
+    featured: 17
+  },
+  {
+    id: 18,
+    name: "Crimsonwing Slayer",
+    hero: "Legion Commander",
+    category: "Mix/Sets",
+    rarity: "Mythical",
+    condition: "Bundled",
+    price: 15,
+    originalPrice: 20,
+    stock: 0,
+    image: "./images/Crimsonwing Slayer.png",
+    featured: 18
+  },
 {
   id: 15,
   name: "Weather Snow",
@@ -1241,8 +1236,6 @@ const toast = document.getElementById("toast");
 // PRODUCT FILTERING, SEARCH AND SORTING
 // ========================================
 
-
-
 function visibleProducts() {
   const searchTerm = searchInput.value.trim().toLowerCase();
 
@@ -1274,35 +1267,30 @@ function visibleProducts() {
   });
 
   if (sortSelect.value === "low") {
-  list.sort((a, b) => a.price - b.price);
-} else if (sortSelect.value === "high") {
-  list.sort((a, b) => b.price - a.price);
-} else if (sortSelect.value === "name") {
-  list.sort((a, b) => a.name.localeCompare(b.name));
-} else {
-  list.sort((a, b) => {
-    const rarityA =
-      rarityPriority[(a.rarity || "").toLowerCase()] ?? 99;
+    list.sort((a, b) => a.price - b.price);
+  } else if (sortSelect.value === "high") {
+    list.sort((a, b) => b.price - a.price);
+  } else if (sortSelect.value === "name") {
+    list.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    list.sort((a, b) => {
+      const rarityA =
+        rarityPriority[(a.rarity || "").toLowerCase()] ?? 99;
 
-    const rarityB =
-      rarityPriority[(b.rarity || "").toLowerCase()] ?? 99;
+      const rarityB =
+        rarityPriority[(b.rarity || "").toLowerCase()] ?? 99;
 
-    // Higher featured number = more recently listed.
-    return rarityA - rarityB || b.featured - a.featured;
-  });
-}
+      // Higher featured number = more recently listed.
+      return rarityA - rarityB || b.featured - a.featured;
+    });
+  }
 
   return list;
 }
 
-
-// ========================================
-// DISPLAY MARKET PRODUCTS
-// ========================================
 // ========================================
 // CATEGORY STOCK TOTALS
 // ========================================
-
 
 function updateCategoryCounts() {
   // Count available product listings in each category.
@@ -1333,7 +1321,11 @@ function updateCategoryCounts() {
     countInfused: countCategory("Infused"),
     countKineticGem: countCategory("Kinetic Gem"),
     countCursorPack: countCategory("Cursor Pack"),
-    countRandom: countCategory("Random")
+    countRandom: countCategory("Random"),
+    countCouriersWards:
+      countCategory("Couriers/Wards") +
+      countCategory("Couriers") +
+      countCategory("Wards")
   };
 
   Object.entries(counts).forEach(([id, count]) => {
@@ -1345,12 +1337,15 @@ function updateCategoryCounts() {
   });
 }
 
+// ========================================
+// DISPLAY MARKET PRODUCTS
+// ========================================
+
 function renderProducts() {
   const list = visibleProducts();
 
   document.getElementById("resultsText").textContent =
     `Showing ${list.length} item${list.length === 1 ? "" : "s"}`;
-
 
   grid.innerHTML = list.map((product) => `
     <article class="product-card">
@@ -1373,7 +1368,6 @@ ${
         }
       </div>
 
-      
 <div class="card-body">
   <span class="item-category">${product.category}</span>
   <h3>${product.name}</h3>
@@ -1389,7 +1383,6 @@ ${
          TRADABLE / MARKETABLE
        </span>`
 }
-
 
         <p class="stock-label ${product.stock <= 0 ? "sold-out" : ""}">
           ${product.stock <= 0 ? "SOLD OUT" : `${product.stock} piece${product.stock === 1 ? "" : "s"} available`}
@@ -1421,8 +1414,6 @@ ${
 // DISPLAY CACHE SETS
 // ========================================
 
-
-
 function renderCacheSets() {
   const searchTerm = searchInput.value.trim().toLowerCase();
 
@@ -1443,8 +1434,7 @@ function renderCacheSets() {
 
     return searchableText.includes(searchTerm);
   });
-
-  // Newest listings first (higher featured number = newer listing)
+    // Newest listings first (higher featured number = newer listing)
   list.sort((a, b) => b.featured - a.featured);
 
   cacheSetGrid.innerHTML = list.map((product) => `
@@ -1489,8 +1479,6 @@ function renderCacheSets() {
 
   document.getElementById("cacheEmptyState").hidden = list.length !== 0;
 }
-
-
 
 // ========================================
 // NOTIFICATION MESSAGE
@@ -1640,11 +1628,48 @@ document.getElementById("closeCartBackdrop").addEventListener("click", closeCart
 // CATEGORY BUTTONS
 // ========================================
 
+/* ========================================
+   COLLAPSIBLE CATEGORY SIDEBAR
+   ======================================== */
+
+const categorySidebar = document.getElementById("categorySidebar");
+const toggleCategoriesButton = document.getElementById("toggleCategories");
+const categoryList = document.getElementById("categoryList");
+const categoryToggleArrow = document.getElementById("categoryToggleArrow");
+
+if (
+  categorySidebar &&
+  toggleCategoriesButton &&
+  categoryList &&
+  categoryToggleArrow
+) {
+  toggleCategoriesButton.addEventListener("click", () => {
+    const isCollapsed = categorySidebar.classList.toggle(
+      "categories-collapsed"
+    );
+
+    categoryList.hidden = isCollapsed;
+
+    toggleCategoriesButton.setAttribute(
+      "aria-expanded",
+      String(!isCollapsed)
+    );
+
+    toggleCategoriesButton.title = isCollapsed
+      ? "Expand categories"
+      : "Collapse categories";
+
+    categoryToggleArrow.textContent = isCollapsed
+      ? "▶"
+      : "▼";
+  });
+}
+
+
 document.querySelectorAll(".category").forEach((button) => {
   button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
-
-    document.querySelectorAll(".category").forEach((categoryButton) => {
+        document.querySelectorAll(".category").forEach((categoryButton) => {
       categoryButton.classList.toggle(
         "active",
         categoryButton === button
@@ -1663,6 +1688,7 @@ searchInput.addEventListener("input", () => {
   renderProducts();
   renderCacheSets();
 });
+
 sortSelect.addEventListener("change", renderProducts);
 
 // ========================================
@@ -1693,10 +1719,9 @@ document.querySelectorAll(".nav-links a[data-nav]").forEach((link) => {
 });
 
 // ========================================
-// REMOVE ITEMS FROM CART
+// SHOPPING CART QUANTITY CONTROLS
 // ========================================
 
-// SHOPPING CART QUANTITY CONTROLS
 document.getElementById("cartItems").addEventListener("click", event => {
 
   // INCREASE QUANTITY
@@ -1759,7 +1784,6 @@ const paymentDetails = document.getElementById("paymentDetails");
 
 // Open the payment popup from checkout
 
-
 document.getElementById("checkoutButton").addEventListener("click", () => {
   // Make sure the cart contains items.
   if (!cart.length) {
@@ -1785,7 +1809,6 @@ document.getElementById("checkoutButton").addEventListener("click", () => {
   paymentUrl.searchParams.set("total", String(total));
 
   // Pass a safe snapshot of the purchased items to the payment page.
-  // Include only the fields needed for the order summary.
   const orderItems = cart.map((item) => {
     const product = products.find((entry) => entry.id === item.id);
     return {
@@ -1795,6 +1818,7 @@ document.getElementById("checkoutButton").addEventListener("click", () => {
       subtotal: product.price * item.qty
     };
   });
+
   paymentUrl.searchParams.set("items", JSON.stringify(orderItems));
 
   const paymentTab = window.open(paymentUrl.href, "_blank");
@@ -1804,8 +1828,6 @@ document.getElementById("checkoutButton").addEventListener("click", () => {
     showToast("Please allow pop-ups for this website.");
   }
 });
-
-
 
 // ========================================
 // ESCAPE KEY SUPPORT

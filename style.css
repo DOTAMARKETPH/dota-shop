@@ -1789,3 +1789,91 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+/* =====================================
+   COLLAPSIBLE CATEGORY SIDEBAR
+===================================== */
+
+.sidebar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 8px 15px;
+}
+
+.sidebar-heading h3 {
+  margin: 0;
+  color: #c6c7cd;
+  font-size: 12px;
+}
+
+.category-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: #252830;
+  border: 1px solid #3b404b;
+  border-radius: 4px;
+  color: #f4f4f6;
+  font-size: 11px;
+  transition: background .2s, border-color .2s;
+}
+
+.category-toggle:hover {
+  background: #2b2025;
+  border-color: var(--red);
+}
+
+.category-list {
+  display: block;
+}
+
+.category-list[hidden] {
+  display: none !important;
+}
+
+/* Mobile sidebar header stays visible so categories can be reopened */
+@media (max-width: 760px) {
+  .sidebar {
+    display: block;
+    padding: 10px;
+  }
+
+  .sidebar-heading {
+    display: flex;
+    width: 100%;
+    margin: 0 0 8px;
+  }
+
+  .sidebar-heading h3 {
+    display: block;
+  }
+
+  .category-list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .category-list[hidden] {
+    display: none !important;
+  }
+
+  .category {
+    width: auto;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 10px 8px;
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .sidebar-note {
+    display: none;
+  }
+}
