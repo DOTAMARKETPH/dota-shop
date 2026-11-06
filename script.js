@@ -48,7 +48,7 @@ const products = [
     featured: 1002
   },
    {
-    id: 1000,
+    id: 105,
     name: "Star Sage",
     category: "Cache Sets",
     condition: "unbundled",
@@ -56,7 +56,7 @@ const products = [
     price: 150,
     stock: 1,
     image: "./cache/Star Sage.png",
-    featured: 1000
+    featured: 105
   },
   {
     id: 104,
