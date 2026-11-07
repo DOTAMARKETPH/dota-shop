@@ -658,7 +658,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 1,
+    stock: 0,
     image: "./cursor/The International 2019 Cursor Pack.png",
     featured: 49
   },
@@ -1012,7 +1012,7 @@ const products = [
     condition: "Bundled",
     price: 20,
     originalPrice: 25,
-    stock: 5,
+    stock: 4,
     image: "./images/Edge of Extinction.png",
     featured: 21
   },
@@ -1206,7 +1206,7 @@ const products = [
     condition: "Bundled",
     price: 15,
     originalPrice: 20,
-    stock: 3,
+    stock: 2,
     image: "./images/Bottomfeeder.png",
     featured: 14
   },
@@ -1255,7 +1255,7 @@ const products = [
   category: "Weather",
   rarity: "Genuine",
   price: 250,
-  stock: 1,
+  stock: 0,
   image: "./images/Snow.png",
   featured: 15
 },
