@@ -1205,7 +1205,7 @@ const products = [
     rarity: "immortal",
     price: 110,
     originalPrice: 146,
-    stock: 1,
+    stock: 0,
     image: "./images/Genuine Hell's Usher.png",
     featured: 3
   },
