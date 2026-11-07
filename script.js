@@ -1085,7 +1085,7 @@ const products = [
     rarity: "Immortal",
     price: 47,
     originalPrice: 59,
-    stock: 1,
+    stock: 0,
     image: "./Immortal/Tempest Revelation.png",
     featured: 112
   },
@@ -1109,7 +1109,7 @@ const products = [
     rarity: "Immortal",
     price: 176,
     originalPrice: 220,
-    stock: 1,
+    stock: 0,
     image: "./Immortal/Magus Apex.png",
     featured: 110
   },
@@ -1121,7 +1121,7 @@ const products = [
     rarity: "Immortal",
     price: 25,
     originalPrice: 32,
-    stock: 1,
+    stock: 0,
     image: "./Immortal/Immortal Pantheon.png",
     featured: 109
   },
