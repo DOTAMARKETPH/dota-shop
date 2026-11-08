@@ -960,7 +960,7 @@ const products = [
     condition: "Bundled",
     price: 100,
     originalPrice: 133,
-    stock: 2,
+    stock: 0,
     image: "./images/Night Terrors.png",
     featured: 25
   },
