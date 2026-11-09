@@ -1071,8 +1071,8 @@ const products = [
     category: "mix/sets",
     rarity: "Legendary",
     condition: "Bundled",
-    price: 150,
-    originalPrice: 150,
+    price: 130,
+    originalPrice:0,
     stock: 1,
     image: "./images/Crownfall Creeps Bundle.png",
     featured: 114
