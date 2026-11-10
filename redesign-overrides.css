@@ -125,3 +125,125 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .search-wrap input { width: 90px; font-size: 11px; }
   .cart-button { padding: 9px 10px; gap: 5px; }
 }
+
+
+/* =========================
+   COMPACT PHONE HEADER
+   ========================= */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 96px; }
+
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 0;
+    height: auto;
+    padding: 5px 10px 4px;
+    gap: 2px 8px;
+  }
+
+  .topbar .brand {
+    order: 1;
+    flex: 0 0 auto;
+    max-width: none;
+    margin: 0 auto 0 0;
+  }
+
+  .brand-logo {
+    width: 112px;
+    height: 39px;
+  }
+
+  .header-actions {
+    order: 2;
+    flex: 0 0 auto;
+    margin: 0 0 0 auto;
+    gap: 6px;
+    max-width: none;
+  }
+
+  .search-wrap {
+    height: 32px;
+    padding: 0 7px;
+    gap: 5px;
+    max-width: 132px;
+  }
+
+  .search-wrap span { font-size: 19px; }
+  .search-wrap input {
+    width: 82px;
+    font-size: 11px;
+  }
+
+  .cart-button {
+    min-height: 32px;
+    padding: 6px 8px;
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .cart-button .cart-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .cart-button span:last-child {
+    padding: 2px 5px;
+    font-size: 10px;
+  }
+
+  .nav-links {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 29px;
+    min-height: 29px;
+    margin: 0;
+    padding: 0 1px;
+    gap: 17px;
+    font-size: 11px;
+    line-height: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    height: 29px;
+    min-height: 29px;
+    padding: 0 1px;
+  }
+
+  .market-section {
+    width: calc(100% - 20px);
+    margin-top: 9px;
+    margin-bottom: 34px;
+  }
+
+  .hero-description {
+    padding: 16px 14px;
+    margin-bottom: 15px;
+  }
+
+  .hero-description h1 {
+    font-size: clamp(23px, 6vw, 28px);
+    margin-bottom: 7px;
+  }
+
+  .hero-description > p:last-child {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .section-heading { margin-bottom: 12px; }
+}
+
+@media (max-width: 380px) {
+  .brand-logo { width: 98px; }
+  .search-wrap { max-width: 116px; }
+  .search-wrap input { width: 66px; }
+  .cart-button { padding: 6px 7px; }
+  .nav-links { gap: 13px; }
+}
