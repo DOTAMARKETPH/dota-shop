@@ -1408,6 +1408,15 @@ const rarityPriority = {
 const money = (amount) =>
   "₱" + amount.toLocaleString("en-PH");
 
+// Show a discount only when a valid originalPrice is provided in the product data.
+const discountPercent = (product) => {
+  const original = Number(product.originalPrice);
+  const current = Number(product.price);
+  return original > current && original > 0
+    ? Math.round(((original - current) / original) * 100)
+    : 0;
+};
+
 let activeCategory = "All";
 let cart = [];
 let toastTimer;
@@ -1538,6 +1547,7 @@ function renderProducts() {
     <article class="product-card">
       <div class="product-art" style="--glow:${product.glow || "#8751c4"}">
         <span class="rarity">${product.rarity}</span>
+        ${discountPercent(product) ? `<span class="discount-badge">${discountPercent(product)}% OFF</span>` : ""}
 
 ${
           product.image
@@ -1568,8 +1578,9 @@ ${
 
         <div class="card-bottom">
           <div class="price-stack">
-  <span class="price">${money(product.price)}</span>
-</div>
+            ${discountPercent(product) ? `<span class="original-price">${money(product.originalPrice)}</span>` : ""}
+            <span class="price">${money(product.price)}</span>
+          </div>
           ${
             product.stock <= 0
               ? '<span class="sold-out-text">Sold Out</span>'
@@ -1614,6 +1625,7 @@ function renderCacheSets() {
     <article class="product-card">
       <div class="product-art" style="--glow:${product.glow || "#8751c4"}">
         <span class="rarity">${product.rarity || "CACHE SET"}</span>
+        ${discountPercent(product) ? `<span class="discount-badge">${discountPercent(product)}% OFF</span>` : ""}
         ${
           product.image
             ? `<img class="product-image" src="${product.image}" alt="${product.name}">`
@@ -1642,7 +1654,10 @@ function renderCacheSets() {
         </p>
 
         <div class="card-bottom">
-          <span class="price">${money(product.price)}</span>
+          <div class="price-stack">
+            ${discountPercent(product) ? `<span class="original-price">${money(product.originalPrice)}</span>` : ""}
+            <span class="price">${money(product.price)}</span>
+          </div>
           <button class="add-button" data-add="${product.id}"
             aria-label="Add ${product.name} to cart">+</button>
         </div>
