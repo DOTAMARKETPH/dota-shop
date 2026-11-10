@@ -15,7 +15,7 @@ const products = [
     featured: 1004
   },
   {
-    id: 1005,
+    id: 1004,
     name: "Blue Horizons",
     category: "Cache Sets",
     condition: "unbundled",
@@ -23,7 +23,7 @@ const products = [
     price: 500,
     stock: 1,
     image: "./cache/Blue Horizons.png",
-    featured: 1005
+    featured: 1004
   },
   {
     id: 1003,
@@ -1429,7 +1429,6 @@ function visibleProducts() {
     if (product.stock <= 0) return false;
 
     const category = product.category.toLowerCase();
-    if (category === "cache sets") return false;
     const selected = activeCategory.toLowerCase();
 
     const matchesCategory =
@@ -1540,6 +1539,15 @@ function renderProducts() {
         <span class="rarity">${product.rarity}</span>
 
 ${
+  product.originalPrice && product.originalPrice > product.price
+    ? `<span class="discount-badge">
+        🔥 ${Math.round(
+          ((product.originalPrice - product.price) / product.originalPrice) * 100
+        )}% OFF
+      </span>`
+    : ""
+}
+        ${
           product.image
             ? `<img class="product-image" src="${product.image}" alt="${product.name}">`
             : `<span class="item-symbol" aria-hidden="true">${product.symbol || "✦"}</span>`
@@ -1568,6 +1576,11 @@ ${
 
         <div class="card-bottom">
           <div class="price-stack">
+  ${
+    product.originalPrice && product.originalPrice > product.price
+      ? `<span class="original-price">${money(product.originalPrice)}</span>`
+      : ""
+  }
   <span class="price">${money(product.price)}</span>
 </div>
           ${
