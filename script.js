@@ -1179,7 +1179,7 @@ const products = [
     hero: "Juggernaut",
     category: "Arcana",
     rarity: "Arcana",
-    price: 1500,
+    price: 1450,
     originalPrice: 1954,
     stock: 1,
     image: "./Arcana/Bladeform Legacy.png",
