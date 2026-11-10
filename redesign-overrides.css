@@ -247,3 +247,267 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .cart-button { padding: 6px 7px; }
   .nav-links { gap: 13px; }
 }
+
+
+/* =========================
+   CLEANER PHONE LAYOUT
+   ========================= */
+@media (max-width: 760px) {
+  /* Two clear header rows: brand/actions, then navigation */
+  .topbar {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-areas:
+      "brand actions"
+      "nav nav" !important;
+    align-items: center !important;
+    column-gap: 10px !important;
+    row-gap: 4px !important;
+    padding: 7px 14px 0 !important;
+    min-height: 0 !important;
+  }
+
+  .topbar .brand {
+    grid-area: brand !important;
+    justify-self: start !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .brand-logo {
+    display: block;
+    width: 92px !important;
+    height: 42px !important;
+    object-fit: contain;
+  }
+
+  .header-actions {
+    grid-area: actions !important;
+    justify-self: end !important;
+    display: flex !important;
+    align-items: center !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    gap: 7px !important;
+  }
+
+  .search-wrap {
+    width: 145px !important;
+    max-width: 42vw !important;
+    height: 36px !important;
+    min-width: 0 !important;
+    padding: 0 8px !important;
+    gap: 6px !important;
+  }
+
+  .search-wrap input {
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: 11px !important;
+  }
+
+  .cart-button {
+    min-height: 36px !important;
+    padding: 6px 8px !important;
+    gap: 5px !important;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    grid-area: nav !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 22px !important;
+    overflow-x: auto !important;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    flex: 0 0 auto !important;
+    height: 38px !important;
+    padding: 0 1px !important;
+    font-size: 11px !important;
+  }
+
+  /* Consistent content width and less vertical whitespace */
+  .market-section {
+    width: calc(100% - 28px) !important;
+    margin: 14px auto 34px !important;
+  }
+
+  .hero-description {
+    margin: 0 0 20px !important;
+    padding: 17px 16px !important;
+    border-radius: 13px !important;
+  }
+
+  .hero-description .eyebrow {
+    font-size: 10px !important;
+    margin-bottom: 7px !important;
+  }
+
+  .hero-description h1 {
+    font-size: clamp(24px, 6.3vw, 29px) !important;
+    line-height: 1.12 !important;
+    margin: 0 0 9px !important;
+  }
+
+  .hero-description > p:last-child {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Left-align the marketplace title and give sorting a tidy row */
+  .section-heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    margin: 0 0 14px !important;
+    text-align: left !important;
+  }
+
+  .section-heading > div {
+    text-align: left !important;
+    width: 100%;
+  }
+
+  .section-heading .eyebrow {
+    margin: 0 0 3px !important;
+    font-size: 10px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .section-heading h2 {
+    margin: 0 !important;
+    text-align: left !important;
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+  }
+
+  .sort-label {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+    font-size: 12px !important;
+  }
+
+  .sort-label select {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 220px;
+    height: 38px;
+    padding: 0 10px !important;
+  }
+
+  /* Category buttons align in a clean two-column grid */
+  .sidebar {
+    padding: 12px !important;
+    margin: 0 0 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .sidebar-heading {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 0 0 10px !important;
+  }
+
+  .sidebar-heading h3 {
+    display: block !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+  }
+
+  .category-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 7px !important;
+  }
+
+  .category-list[hidden] { display: none !important; }
+
+  .category {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    padding: 8px 9px !important;
+    gap: 7px !important;
+    border: 1px solid rgba(148,163,184,.12) !important;
+    border-radius: 7px !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+  }
+
+  .category span {
+    flex: 0 1 auto !important;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .category small { display: none !important; }
+
+  .category.active {
+    border-color: rgba(237,52,59,.45) !important;
+    box-shadow: inset 3px 0 var(--red) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar { padding-left: 11px !important; padding-right: 11px !important; }
+  .brand-logo { width: 82px !important; }
+  .search-wrap { max-width: 39vw !important; }
+  .cart-button { padding: 6px 7px !important; }
+  .nav-links { gap: 17px !important; }
+  .category-list { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+
+/* Keep the marketplace eyebrow and title firmly left-aligned on phones */
+@media (max-width: 760px) {
+  .market-section .section-heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .market-section .section-heading > div {
+    display: block !important;
+    align-self: flex-start !important;
+    width: 100% !important;
+    margin: 0 auto 0 0 !important;
+    text-align: left !important;
+  }
+
+  .market-section .section-heading > div .eyebrow,
+  .market-section .section-heading > div h2 {
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+}
