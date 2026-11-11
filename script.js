@@ -4,6 +4,16 @@
 // PRODUCT LISTINGS
 const products = [
   {
+    id: 121,
+    name: "Wyvern Hatchling Full Unlocked",
+    category: "Couriers/Wards",
+    rarity: "Legendary",
+    price: 100,
+    stock: 5,
+    image: "./couriers/wyvern hatchling.png",
+    featured: 121
+  },
+  {
     id: 1004,
     name: "War Rig Eradicators",
     category: "Cache Sets",
@@ -583,12 +593,32 @@ const products = [
     featured: 58
   },
   {
-    id: 56,
-    name: "Mega-Kills: Cave Johnson",
+    id: 122,
+    name: "Mega-Kills & Announcer: Meepo",
     category: "Random",
     rarity: "Mythical",
-    price: 2,
-    stock: 0,
+    price: 5,
+    stock: 10,
+    image: "./random/meepo.png",
+    featured: 122
+  },
+  {
+    id: 121,
+    name: "Mega-Kills & Announcer: Bristleback",
+    category: "Random",
+    rarity: "Mythical",
+    price: 5,
+    stock: 10,
+    image: "./random/bristleback.png",
+    featured: 121
+  },
+  {
+    id: 56,
+    name: "Mega-Kills & Announcer: Cave Johnson",
+    category: "Random",
+    rarity: "Mythical",
+    price: 5,
+    stock: 10,
     image: "./random/Mega-Kills Cave Johnson.png",
     featured: 56
   },
@@ -634,11 +664,11 @@ const products = [
   },
   {
     id: 52,
-    name: "Mega-Kills: Kunkka & Tidehunter",
+    name: "Mega-Kills & Announcer: Kunkka & Tidehunter",
     category: "Random",
     rarity: "Mythical",
-    price: 5,
-    stock: 0,
+    price: 10,
+    stock: 10,
     image: "./random/Mega-Kills Kunkka & Tidehunter.png",
     featured: 52
   },
@@ -648,7 +678,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 0,
+    stock: 5,
     image: "./cursor/Unbroken Stallion Cursor Pack.png",
     featured: 50
   },
@@ -658,7 +688,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 0,
+    stock: 5,
     image: "./cursor/The International 2019 Cursor Pack.png",
     featured: 49
   },
@@ -668,7 +698,7 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 0,
+    stock: 5,
     image: "./cursor/The International 2016 Cursor Pack.png",
     featured: 48
   },
@@ -688,9 +718,29 @@ const products = [
     category: "Cursor Pack",
     rarity: "Mythical",
     price: 5,
-    stock: 0,
+    stock: 5,
     image: "./cursor/Diretide 2020 Cursor Pack.png",
     featured: 46
+  },
+  {
+    id: 119,
+    name: "Steam Chopper Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 5,
+    stock: 5,
+    image: "./cursor/Steam Chopper Cursor Pack.png",
+    featured: 119
+  },
+  {
+    id: 118,
+    name: "The International 2017 Cursor Pack",
+    category: "Cursor Pack",
+    rarity: "Mythical",
+    price: 5,
+    stock: 5,
+    image: "./cursor/The International 2017 Cursor Pack.png",
+    featured: 118
   },
   {
     id: 45,
@@ -861,6 +911,19 @@ const products = [
     featured: 33
   },
   {
+  id: 120,
+  name: "Owlwatch Commander",
+  hero: "Gyrocopter",
+  category: "Mix/Sets",
+  rarity: "Rare",
+  condition: "Bundled",
+  price: 16,
+  originalPrice: 21,
+  stock: 1,
+  image: "./images/Owlwatch Commander.png",
+  featured: 120
+},
+  {
     id: 32,
     name: "Wraith of the Red Sands",
     hero: "Phantom Lancer",
@@ -882,7 +945,7 @@ const products = [
     condition: "Bundled",
     price: 15,
     originalPrice: 20,
-    stock: 0,
+    stock: 1,
     image: "./images/Thornwatch.png",
     featured: 31
   },
@@ -999,7 +1062,7 @@ const products = [
     condition: "Bundled",
     price: 20,
     originalPrice: 25,
-    stock: 1,
+    stock: 3,
     image: "./images/Eye of the Fateweaver.png",
     featured: 22
   },
@@ -1025,7 +1088,7 @@ const products = [
     condition: "Bundled",
     price: 15,
     originalPrice: 20,
-    stock: 0,
+    stock: 1,
     image: "./images/Dark Realm Oracles.png",
     featured: 20
   },
@@ -1073,7 +1136,7 @@ const products = [
     condition: "Bundled",
     price: 130,
     originalPrice:0,
-    stock: 1,
+    stock: 4,
     image: "./images/Crownfall Creeps Bundle.png",
     featured: 114
   },
@@ -1488,7 +1551,7 @@ function visibleProducts() {
 // CATEGORY STOCK TOTALS
 // ========================================
 
-function updateCategoryCounts() {
+function updateCategoryCounts(displayedCount = visibleProducts().length) {
   // Count available product listings in each category.
   const countCategory = (categoryName) => {
     return products.filter(
@@ -1498,13 +1561,10 @@ function updateCategoryCounts() {
     ).length;
   };
 
-  // Count all available product listings.
-  const allCount = products.filter(
-    (product) => product.stock > 0
-  ).length;
-
+  // "All items" shows the number of products currently displayed
+  // after the active category, search, and stock filters are applied.
   const counts = {
-    countAll: allCount,
+    countAll: displayedCount,
     countArcana: countCategory("Arcana"),
     countImmortals:
       countCategory("Immortal") + countCategory("Immortals"),
@@ -1539,6 +1599,7 @@ function updateCategoryCounts() {
 
 function renderProducts() {
   const list = visibleProducts();
+  updateCategoryCounts(list.length);
 
   document.getElementById("resultsText").textContent =
     `Showing ${list.length} item${list.length === 1 ? "" : "s"}`;
