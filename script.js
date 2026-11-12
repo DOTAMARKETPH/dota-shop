@@ -919,7 +919,7 @@ const products = [
   condition: "Bundled",
   price: 16,
   originalPrice: 21,
-  stock: 1,
+  stock: 0,
   image: "./images/Owlwatch Commander.png",
   featured: 120
 },
@@ -945,7 +945,7 @@ const products = [
     condition: "Bundled",
     price: 15,
     originalPrice: 20,
-    stock: 1,
+    stock: 0,
     image: "./images/Thornwatch.png",
     featured: 31
   },
@@ -1010,7 +1010,7 @@ const products = [
     condition: "Unbundled",
     price: 24,
     originalPrice: 30,
-    stock: 3,
+    stock: 2,
     image: "./images/Patterns of the Pristine.png",
     featured: 21
   },
@@ -1075,7 +1075,7 @@ const products = [
     condition: "Bundled",
     price: 20,
     originalPrice: 25,
-    stock: 4,
+    stock: 3,
     image: "./images/Edge of Extinction.png",
     featured: 21
   },
@@ -1113,7 +1113,7 @@ const products = [
     rarity: "Legendary",
     price: 27,
     originalPrice: 34,
-    stock: 1,
+    stock: 0,
     image: "./random/Bladeform Legacy Mask.png",
     featured: 113
   },
@@ -1208,7 +1208,7 @@ const products = [
     rarity: "Immortal",
     price: 95,
     originalPrice: 119,
-    stock: 1,
+    stock: 0,
     image: "./Immortal/Golden Edge of the Lost Order.png",
     featured: 107
   },
@@ -1374,7 +1374,7 @@ const products = [
     condition: "Bundled",
     price: 120,
     originalPrice: 150,
-    stock: 1,
+    stock: 0,
     image: "./images/Arena Champion.png",
     featured: 12
   },
